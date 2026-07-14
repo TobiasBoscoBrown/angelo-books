@@ -3,6 +3,7 @@ import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { SITE_URL } from "@/lib/site";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -17,6 +18,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Angelo Books | Outbound Sales for Marketing Agencies",
   description:
     "Angelo Books fills your agency's pipeline with qualified meetings. We handle the outbound calling so you can focus on delivery. Serving marketing agencies in the US and Australia.",

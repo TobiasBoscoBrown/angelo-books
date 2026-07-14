@@ -26,6 +26,7 @@ export default function Footer() {
             {[
               { label: "Services", href: "/#services" },
               { label: "Results", href: "/#proof" },
+              { label: "Articles", href: "/articles" },
               { label: "About Angelo", href: "/about" },
               { label: "FAQ", href: "/#faq" },
               { label: "Book a Call", href: brand.calendlyUrl },

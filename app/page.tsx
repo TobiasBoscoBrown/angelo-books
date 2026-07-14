@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { brand } from "@/lib/brand";
+import { articles } from "@/lib/articles";
 import Faq from "@/components/Faq";
 import Proof from "@/components/Proof";
 import Reveal from "@/components/Reveal";
@@ -414,6 +415,90 @@ export default function Home() {
               </ul>
             </div>
           </Reveal>
+        </div>
+      </section>
+
+      {/* ARTICLES */}
+      <section
+        id="articles"
+        className="py-24 md:py-32"
+        style={{ background: "var(--off-white)" }}
+      >
+        <div className="max-w-6xl mx-auto px-5">
+          <Reveal>
+            <div className="mb-14 max-w-2xl">
+              <p
+                className="text-xs font-semibold uppercase tracking-[0.18em] mb-4"
+                style={{ color: "var(--gold)" }}
+              >
+                Articles
+              </p>
+              <h2
+                className="font-display text-4xl md:text-5xl font-bold tracking-[-0.02em]"
+                style={{ color: "var(--navy)" }}
+              >
+                Outbound, with the numbers attached.
+              </h2>
+              <p
+                className="mt-5 text-lg leading-relaxed"
+                style={{ color: "var(--text-mid)" }}
+              >
+                Written from campaigns we actually ran. Where there is a number,
+                there is a screenshot behind it.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="grid grid-cols-1 gap-5">
+            {articles.slice(0, 2).map((a, i) => (
+              <Reveal key={a.slug} delay={i * 80} distance={26}>
+                <Link
+                  href={`/articles/${a.slug}`}
+                  className="group block p-8 md:p-10 rounded-2xl border transition-all duration-300 hover:-translate-y-1"
+                  style={{ background: "white", borderColor: "var(--line)" }}
+                >
+                  <div
+                    className="flex flex-wrap items-center gap-3 text-xs mb-4"
+                    style={{ color: "var(--text-soft)" }}
+                  >
+                    <span>{a.readingMinutes} min read</span>
+                  </div>
+                  <h3
+                    className="font-display text-2xl md:text-3xl font-semibold mb-3 leading-snug"
+                    style={{ color: "var(--navy)" }}
+                  >
+                    {a.h1}
+                  </h3>
+                  <p
+                    className="text-base leading-relaxed mb-6 max-w-2xl"
+                    style={{ color: "var(--text-mid)" }}
+                  >
+                    {a.description}
+                  </p>
+                  <span
+                    className="text-xs font-semibold uppercase tracking-[0.14em] inline-flex items-center gap-1.5 transition-transform duration-300 group-hover:translate-x-1"
+                    style={{ color: "var(--gold)" }}
+                  >
+                    Read it <span aria-hidden>→</span>
+                  </span>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+
+          {articles.length > 2 && (
+            <Reveal delay={160}>
+              <div className="mt-10">
+                <Link
+                  href="/articles"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded border font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5"
+                  style={{ color: "var(--navy)", borderColor: "var(--navy)" }}
+                >
+                  All articles <span aria-hidden>→</span>
+                </Link>
+              </div>
+            </Reveal>
+          )}
         </div>
       </section>
 
