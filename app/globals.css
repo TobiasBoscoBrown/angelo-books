@@ -25,6 +25,19 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Entrance animation for above-the-fold content. Pure CSS, so it runs on
+   load and never depends on hydration — the hero can't paint blank. */
+@keyframes rise {
+  from { opacity: 0; transform: translate3d(0, 22px, 0); }
+  to   { opacity: 1; transform: none; }
+}
+.rise {
+  animation: rise 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .rise { animation: none; }
+}
+
 /* Carousel */
 .carousel-track {
   display: flex;

@@ -35,6 +35,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
+      <head>
+        {/* Scroll reveals start hidden and are un-hidden by JS. If JS never
+            arrives, un-hide everything rather than serve a blank page. */}
+        <noscript>
+          <style>{`[style*="opacity:0"]{opacity:1!important;transform:none!important}`}</style>
+        </noscript>
+      </head>
       <body>
         <Header />
         <main>{children}</main>

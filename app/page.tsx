@@ -31,16 +31,16 @@ export default function Home() {
 
         <div className="relative max-w-6xl mx-auto px-5 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center w-full">
           <div>
-            <Reveal>
+            <div className="rise" style={{ animationDelay: "0ms" }}>
               <p
                 className="text-xs font-semibold uppercase tracking-[0.2em] mb-5"
                 style={{ color: "var(--gold)" }}
               >
                 Outbound Sales for Marketing Agencies
               </p>
-            </Reveal>
+            </div>
 
-            <Reveal delay={80}>
+            <div className="rise" style={{ animationDelay: "80ms" }}>
               <h1 className="font-display text-[2.6rem] leading-[1.04] md:text-5xl lg:text-6xl font-bold mb-6 text-white tracking-[-0.02em] text-balance">
                 Get in a meeting with your{" "}
                 <span className="relative inline-block">
@@ -55,9 +55,9 @@ export default function Home() {
                 </span>
                 .
               </h1>
-            </Reveal>
+            </div>
 
-            <Reveal delay={150}>
+            <div className="rise" style={{ animationDelay: "150ms" }}>
               <p
                 className="text-lg md:text-xl leading-relaxed mb-9 max-w-xl"
                 style={{ color: "#a8c0d8" }}
@@ -65,9 +65,9 @@ export default function Home() {
                 {brand.subTagline} No tech headache, no hiring, no wasted
                 afternoons on the phone. We dial, qualify, and book. You close.
               </p>
-            </Reveal>
+            </div>
 
-            <Reveal delay={210}>
+            <div className="rise" style={{ animationDelay: "210ms" }}>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href={brand.calendlyUrl}
@@ -90,9 +90,9 @@ export default function Home() {
                   See the receipts
                 </Link>
               </div>
-            </Reveal>
+            </div>
 
-            <Reveal delay={280}>
+            <div className="rise" style={{ animationDelay: "280ms" }}>
               <div
                 className="mt-10 pt-8 border-t flex flex-wrap gap-x-6 gap-y-2 text-sm"
                 style={{
@@ -104,11 +104,11 @@ export default function Home() {
                 <span>US + Australia</span>
                 <span>Marketing agency specialists</span>
               </div>
-            </Reveal>
+            </div>
           </div>
 
           {/* Founder card */}
-          <Reveal delay={160} distance={40} className="relative hidden md:block">
+          <div className="rise relative hidden md:block" style={{ animationDelay: "160ms" }}>
             <div
               className="rounded-3xl p-8 border"
               style={{
@@ -213,7 +213,7 @@ export default function Home() {
                 </a>
               </div>
             </div>
-          </Reveal>
+          </div>
         </div>
       </section>
 
