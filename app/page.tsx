@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { brand } from "@/lib/brand";
-import ResultsCarousel from "@/components/ResultsCarousel";
 import Faq from "@/components/Faq";
 import Proof from "@/components/Proof";
 import Reveal from "@/components/Reveal";
@@ -267,52 +266,6 @@ export default function Home() {
 
       {/* PROOF */}
       <Proof />
-
-      {/* RESULTS */}
-      <section
-        id="results"
-        className="py-24 md:py-32"
-        style={{ background: "var(--navy)" }}
-      >
-        <div className="max-w-6xl mx-auto px-5">
-          <Reveal>
-            <div className="mb-14 max-w-2xl">
-              <p
-                className="text-xs font-semibold uppercase tracking-[0.18em] mb-4"
-                style={{ color: "var(--gold)" }}
-              >
-                Real campaign data
-              </p>
-              <h2 className="font-display text-4xl md:text-5xl font-bold text-white tracking-[-0.02em]">
-                Numbers from actual campaigns.
-              </h2>
-              <p
-                className="mt-5 text-lg leading-relaxed"
-                style={{ color: "#a8c0d8" }}
-              >
-                Not projections. Not averages from someone else&apos;s case
-                study. This is what Angelo Books delivered.
-              </p>
-            </div>
-          </Reveal>
-          <Reveal delay={100}>
-            <ResultsCarousel />
-          </Reveal>
-          <Reveal delay={160}>
-            <div className="mt-14 text-center">
-              <a
-                href={brand.calendlyUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block px-8 py-4 rounded font-semibold transition-transform duration-300 hover:-translate-y-0.5"
-                style={{ background: "var(--gold)", color: "var(--navy-dark)" }}
-              >
-                Book a call to talk through your pipeline
-              </a>
-            </div>
-          </Reveal>
-        </div>
-      </section>
 
       {/* ABOUT STRIP */}
       <section className="py-24 md:py-32" style={{ background: "white" }}>

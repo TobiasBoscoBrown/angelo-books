@@ -25,7 +25,7 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             {[
               { label: "Services", href: "/#services" },
-              { label: "Results", href: "/#results" },
+              { label: "Results", href: "/#proof" },
               { label: "About Angelo", href: "/about" },
               { label: "FAQ", href: "/#faq" },
               { label: "Book a Call", href: brand.calendlyUrl },
