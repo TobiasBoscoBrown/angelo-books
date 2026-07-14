@@ -1,5 +1,7 @@
 import { brand } from "@/lib/brand";
 import Link from "next/link";
+import Image from "next/image";
+import Reveal from "@/components/Reveal";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,20 +15,50 @@ export default function About() {
     <>
       {/* Header band */}
       <section
-        className="pt-36 pb-20"
+        className="relative pt-36 pb-24 overflow-hidden"
         style={{ background: "var(--navy-dark)" }}
       >
-        <div className="max-w-3xl mx-auto px-5">
-          <p
-            className="text-xs font-semibold uppercase tracking-widest mb-4"
-            style={{ color: "var(--gold)" }}
-          >
-            About
-          </p>
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-white leading-tight">
-            A small team. <br />
-            Real accountability.
-          </h1>
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -top-48 -right-32 w-[760px] h-[760px] rounded-full opacity-[0.10]"
+          style={{
+            background: "radial-gradient(circle, var(--gold) 0%, transparent 62%)",
+          }}
+        />
+        <div className="relative max-w-3xl mx-auto px-5">
+          <Reveal>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-6">
+              <span
+                className="flex-shrink-0 rounded-full p-[3px]"
+                style={{
+                  background:
+                    "linear-gradient(140deg, var(--gold) 0%, rgba(255,255,255,0.15) 100%)",
+                }}
+              >
+                <Image
+                  src="/angelo.png"
+                  alt="Angelo Miguel, founder of Angelo Books"
+                  width={240}
+                  height={240}
+                  priority
+                  className="block rounded-full w-[104px] h-[104px] object-cover"
+                  style={{ background: "white" }}
+                />
+              </span>
+              <div>
+                <p
+                  className="text-xs font-semibold uppercase tracking-[0.18em] mb-3"
+                  style={{ color: "var(--gold)" }}
+                >
+                  About
+                </p>
+                <h1 className="font-display text-4xl md:text-5xl font-bold text-white leading-[1.08] tracking-[-0.02em]">
+                  A small team. <br />
+                  Real accountability.
+                </h1>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 
@@ -110,11 +142,36 @@ export default function About() {
             </a>
             <Link
               href="/#services"
-              className="px-7 py-4 rounded font-semibold text-center border transition-colors"
+              className="px-7 py-4 rounded font-semibold text-center border transition-all duration-300 hover:-translate-y-0.5"
               style={{ color: "var(--navy)", borderColor: "var(--navy)" }}
             >
               See all services
             </Link>
+          </div>
+
+          <div
+            className="mt-12 pt-8 border-t flex flex-wrap items-center gap-x-6 gap-y-2 text-sm"
+            style={{ borderColor: "var(--line)", color: "var(--text-soft)" }}
+          >
+            <span>Find Angelo elsewhere:</span>
+            <a
+              href={brand.threads}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium underline underline-offset-4 transition-colors"
+              style={{ color: "var(--navy)" }}
+            >
+              Threads
+            </a>
+            <a
+              href={brand.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium underline underline-offset-4 transition-colors"
+              style={{ color: "var(--navy)" }}
+            >
+              LinkedIn
+            </a>
           </div>
         </div>
       </section>
