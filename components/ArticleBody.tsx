@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import { brand } from "@/lib/brand";
 import type { Block } from "@/lib/articles";
 import Reveal from "@/components/Reveal";
 
@@ -291,6 +293,88 @@ export default function ArticleBody({ blocks }: { blocks: Block[] }) {
                     </details>
                   ))}
                 </div>
+              </Reveal>
+            );
+
+          case "author":
+            return (
+              <Reveal key={i} distance={30}>
+                <aside
+                  className="my-12 rounded-2xl p-8 md:p-9 border"
+                  style={{ background: "white", borderColor: "var(--line)" }}
+                >
+                  <div className="flex flex-col sm:flex-row sm:items-start gap-6">
+                    <Link
+                      href="/about"
+                      aria-label={`More about ${brand.owner}`}
+                      className="flex-shrink-0 self-start rounded-full p-[3px] transition-transform duration-300 hover:-translate-y-0.5"
+                      style={{
+                        background:
+                          "linear-gradient(140deg, var(--gold) 0%, var(--warm-gray) 100%)",
+                      }}
+                    >
+                      <Image
+                        src="/angelo.png"
+                        alt={`${brand.owner}, founder of ${brand.name}`}
+                        width={240}
+                        height={240}
+                        className="block rounded-full w-[104px] h-[104px] object-cover"
+                        style={{ background: "white" }}
+                      />
+                    </Link>
+
+                    <div className="min-w-0">
+                      <p
+                        className="font-semibold text-lg mb-1.5 flex items-center gap-2.5"
+                        style={{ color: "var(--navy)" }}
+                      >
+                        <span
+                          aria-hidden
+                          className="w-2 h-2 rounded-full flex-shrink-0"
+                          style={{ background: "var(--gold)" }}
+                        />
+                        {b.title}
+                      </p>
+                      <p
+                        className="text-[0.975rem] leading-relaxed mb-6"
+                        style={{ color: "var(--text-mid)" }}
+                      >
+                        {b.text}
+                      </p>
+
+                      <div className="flex flex-wrap items-center gap-3">
+                        <a
+                          href={brand.calendlyUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="px-6 py-3 rounded font-semibold text-sm transition-transform duration-300 hover:-translate-y-0.5"
+                          style={{
+                            background: "var(--gold)",
+                            color: "var(--navy-dark)",
+                          }}
+                        >
+                          Book a Free Call
+                        </a>
+                        <Link
+                          href="/about"
+                          className="group inline-flex items-center gap-2 px-6 py-3 rounded border font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5"
+                          style={{
+                            color: "var(--navy)",
+                            borderColor: "var(--navy)",
+                          }}
+                        >
+                          More about {brand.owner.split(" ")[0]}
+                          <span
+                            aria-hidden
+                            className="transition-transform duration-300 group-hover:translate-x-0.5"
+                          >
+                            →
+                          </span>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </aside>
               </Reveal>
             );
 

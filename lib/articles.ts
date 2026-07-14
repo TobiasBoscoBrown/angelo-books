@@ -12,7 +12,8 @@ export type Block =
   | { t: "quote"; text: string; cite: string }
   | { t: "proof"; src: string; alt: string; width: number; height: number; caption: string }
   | { t: "ul"; items: string[] }
-  | { t: "faq"; items: { q: string; a: string }[] };
+  | { t: "faq"; items: { q: string; a: string }[] }
+  | { t: "author"; title: string; text: string };
 
 export type Article = {
   slug: string;
@@ -220,7 +221,7 @@ export const articles: Article[] = [
         ],
       },
       {
-        t: "callout",
+        t: "author",
         title: "Want your own numbers instead of ours?",
         text: `Book a free strategy call with ${brand.owner}. We will look at your ICP, talk through your current pipeline, and tell you what we would actually run. No long-term contract, campaign basis.`,
       },
