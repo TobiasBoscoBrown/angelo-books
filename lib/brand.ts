@@ -13,6 +13,9 @@ export const brand = {
   type: "Family-operated startup",
   threads: "https://www.threads.com/@justangeloing",
   linkedin: "https://www.linkedin.com/in/angelo-miguel-999b612a4/",
+  founderRole: "Founder",
+  // Angelo's own words, from his Threads posts.
+  founderQuote: "I book qualified meetings for marketing agencies in the US and AU.",
   accentColor: "#1a3a5c",
   services: [
     {

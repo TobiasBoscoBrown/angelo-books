@@ -5,8 +5,6 @@ import Faq from "@/components/Faq";
 import Proof from "@/components/Proof";
 import Reveal from "@/components/Reveal";
 
-const snapshot = brand.results.slice(0, 3);
-
 export default function Home() {
   return (
     <>
@@ -43,7 +41,7 @@ export default function Home() {
             </Reveal>
 
             <Reveal delay={80}>
-              <h1 className="font-display text-[2.75rem] leading-[1.02] md:text-6xl lg:text-7xl font-bold mb-6 text-white tracking-[-0.02em]">
+              <h1 className="font-display text-[2.6rem] leading-[1.04] md:text-5xl lg:text-6xl font-bold mb-6 text-white tracking-[-0.02em] text-balance">
                 Get in a meeting with your{" "}
                 <span className="relative inline-block">
                   <span className="relative z-10 italic" style={{ color: "var(--gold-light)" }}>
@@ -103,77 +101,117 @@ export default function Home() {
                 }}
               >
                 <span>Family-operated agency</span>
-                <span aria-hidden style={{ color: "#3c5f85" }}>·</span>
                 <span>US + Australia</span>
-                <span aria-hidden style={{ color: "#3c5f85" }}>·</span>
                 <span>Marketing agency specialists</span>
               </div>
             </Reveal>
           </div>
 
-          {/* Snapshot card */}
+          {/* Founder card */}
           <Reveal delay={160} distance={40} className="relative hidden md:block">
             <div
               className="rounded-3xl p-8 border"
               style={{
                 background:
-                  "linear-gradient(160deg, rgba(37,77,115,0.95) 0%, rgba(26,58,92,0.75) 100%)",
+                  "linear-gradient(160deg, rgba(37,77,115,0.95) 0%, rgba(26,58,92,0.72) 100%)",
                 borderColor: "rgba(255,255,255,0.10)",
                 boxShadow: "0 40px 90px -30px rgba(0,0,0,0.8)",
               }}
             >
-              <div
-                className="rounded-2xl p-7"
-                style={{ background: "rgba(255,255,255,0.06)" }}
-              >
-                <div className="flex items-baseline justify-between mb-6">
-                  <p
-                    className="text-[11px] font-semibold uppercase tracking-[0.16em]"
-                    style={{ color: "var(--gold)" }}
-                  >
-                    One week of dialing
-                  </p>
-                  <p className="text-[11px]" style={{ color: "#7d97b3" }}>
-                    Mar 31 – Apr 4
-                  </p>
-                </div>
-
-                <div className="space-y-5">
-                  {snapshot.map((r) => (
-                    <div key={r.label} className="flex items-baseline gap-4">
-                      <span
-                        className="font-display text-5xl font-bold tabular-nums leading-none w-[4.5rem] flex-shrink-0"
-                        style={{ color: "var(--gold)" }}
-                      >
-                        {r.metric}
-                      </span>
-                      <span className="text-sm" style={{ color: "#a8c0d8" }}>
-                        {r.label}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-
-                <div
-                  className="mt-7 pt-5 border-t text-sm italic"
+              <div className="flex items-center gap-5">
+                <span
+                  className="flex-shrink-0 rounded-full p-[3px]"
                   style={{
-                    borderColor: "rgba(255,255,255,0.15)",
-                    color: "#a8c0d8",
+                    background:
+                      "linear-gradient(140deg, var(--gold) 0%, rgba(255,255,255,0.18) 100%)",
                   }}
                 >
-                  &ldquo;Excellent work!&rdquo; &mdash; client feedback
+                  <Image
+                    src="/angelo.png"
+                    alt="Angelo Miguel, founder of Angelo Books"
+                    width={240}
+                    height={240}
+                    priority
+                    className="block rounded-full w-[132px] h-[132px] object-cover"
+                    style={{ background: "white" }}
+                  />
+                </span>
+                <div className="min-w-0">
+                  <p
+                    className="text-[11px] font-semibold uppercase tracking-[0.16em] mb-2"
+                    style={{ color: "var(--gold)" }}
+                  >
+                    The founder
+                  </p>
+                  <p className="font-display text-3xl font-bold text-white leading-tight">
+                    {brand.owner}
+                  </p>
+                  <p className="text-sm mt-1" style={{ color: "#a8c0d8" }}>
+                    {brand.founderRole}, {brand.name}
+                  </p>
                 </div>
               </div>
 
-              <a
-                href={brand.calendlyUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 block w-full py-3.5 rounded font-semibold text-sm text-center transition-transform duration-300 hover:-translate-y-0.5"
-                style={{ background: "var(--gold)", color: "var(--navy-dark)" }}
+              <blockquote
+                className="mt-7 pt-6 border-t font-display text-xl italic leading-snug"
+                style={{
+                  borderColor: "rgba(255,255,255,0.14)",
+                  color: "var(--gold-light)",
+                }}
               >
-                Get results like this
-              </a>
+                &ldquo;{brand.founderQuote}&rdquo;
+              </blockquote>
+
+              <dl className="mt-7 space-y-3 text-sm">
+                {[
+                  { k: "Based in", v: brand.location },
+                  { k: "Serving", v: brand.serving.join(" + ") },
+                  { k: "Operation", v: `${brand.type}, since ${brand.founded}` },
+                ].map((row) => (
+                  <div key={row.k} className="flex gap-4">
+                    <dt
+                      className="w-20 flex-shrink-0 text-[11px] font-semibold uppercase tracking-[0.12em] pt-0.5"
+                      style={{ color: "#7d97b3" }}
+                    >
+                      {row.k}
+                    </dt>
+                    <dd style={{ color: "#c8d6e5" }}>{row.v}</dd>
+                  </div>
+                ))}
+              </dl>
+
+              <div
+                className="mt-7 pt-6 border-t flex items-center gap-3"
+                style={{ borderColor: "rgba(255,255,255,0.14)" }}
+              >
+                <a
+                  href={brand.threads}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 py-2.5 rounded text-xs font-semibold text-center border transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/10"
+                  style={{ borderColor: "rgba(255,255,255,0.22)", color: "white" }}
+                >
+                  Threads
+                </a>
+                <a
+                  href={brand.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 py-2.5 rounded text-xs font-semibold text-center border transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/10"
+                  style={{ borderColor: "rgba(255,255,255,0.22)", color: "white" }}
+                >
+                  LinkedIn
+                </a>
+                <a
+                  href={brand.calendlyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 py-2.5 rounded text-xs font-semibold text-center transition-transform duration-300 hover:-translate-y-0.5"
+                  style={{ background: "var(--gold)", color: "var(--navy-dark)" }}
+                >
+                  Book a call
+                </a>
+              </div>
             </div>
           </Reveal>
         </div>
