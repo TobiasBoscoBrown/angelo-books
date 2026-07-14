@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #1a3a5c;
+  --navy-dark: #0f2540;
+  --navy-light: #254d73;
+  --gold: #c9a84c;
+  --gold-light: #e8c97a;
+  --off-white: #f8f6f2;
+  --warm-gray: #e8e4de;
+  --text-dark: #1a1a1a;
+  --text-mid: #4a4a4a;
+  --text-soft: #7a7a7a;
+  --line: #d4cfc8;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--off-white);
+  color: var(--text-dark);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Carousel */
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.carousel-track::-webkit-scrollbar { display: none; }
+.carousel-track > * {
+  flex: 0 0 320px;
+  scroll-snap-align: start;
+}
+@media (max-width: 600px) {
+  .carousel-track > * { flex: 0 0 85%; }
+  .car-btn { display: none !important; }
+}
