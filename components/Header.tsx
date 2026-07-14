@@ -9,6 +9,7 @@ export default function Header() {
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 40);
+    handler();
     window.addEventListener("scroll", handler);
     return () => window.removeEventListener("scroll", handler);
   }, []);
@@ -20,19 +21,24 @@ export default function Header() {
     { label: "FAQ", href: "/#faq" },
   ];
 
+  // Unscrolled the header floats over the navy hero band, so it needs light
+  // ink. Once the white bar slides in behind it, everything flips back to navy.
+  const wordmarkColor = scrolled ? "var(--navy)" : "#ffffff";
+  const linkColor = scrolled ? "var(--text-mid)" : "#c8d8e8";
+  const linkHoverColor = scrolled ? "var(--navy)" : "#ffffff";
+  const barColor = scrolled ? "var(--navy)" : "#ffffff";
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white shadow-sm py-3"
-          : "bg-transparent py-5"
+        scrolled ? "bg-white shadow-sm py-3" : "bg-transparent py-5"
       }`}
     >
       <div className="max-w-6xl mx-auto px-5 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
           <span
-            className="font-display text-xl font-bold tracking-tight"
-            style={{ color: "var(--navy)" }}
+            className="font-display text-xl font-bold tracking-tight transition-colors duration-300"
+            style={{ color: wordmarkColor }}
           >
             Angelo Books
           </span>
@@ -44,14 +50,10 @@ export default function Header() {
             <Link
               key={l.href}
               href={l.href}
-              className="text-sm font-medium transition-colors"
-              style={{ color: "var(--text-mid)" }}
-              onMouseOver={(e) =>
-                (e.currentTarget.style.color = "var(--navy)")
-              }
-              onMouseOut={(e) =>
-                (e.currentTarget.style.color = "var(--text-mid)")
-              }
+              className="text-sm font-medium transition-colors duration-300"
+              style={{ color: linkColor }}
+              onMouseOver={(e) => (e.currentTarget.style.color = linkHoverColor)}
+              onMouseOut={(e) => (e.currentTarget.style.color = linkColor)}
             >
               {l.label}
             </Link>
@@ -60,8 +62,20 @@ export default function Header() {
             href={brand.calendlyUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2.5 text-sm font-semibold rounded text-white transition-opacity hover:opacity-90"
-            style={{ background: "var(--navy)" }}
+            className="px-5 py-2.5 text-sm font-semibold rounded border transition-all duration-300 hover:opacity-90"
+            style={
+              scrolled
+                ? {
+                    background: "var(--navy)",
+                    borderColor: "var(--navy)",
+                    color: "#ffffff",
+                  }
+                : {
+                    background: "transparent",
+                    borderColor: "rgba(255,255,255,0.65)",
+                    color: "#ffffff",
+                  }
+            }
           >
             Book a Call
           </a>
@@ -74,22 +88,22 @@ export default function Header() {
           aria-label="Toggle menu"
         >
           <span
-            className={`block h-0.5 w-6 bg-current transition-transform ${
+            className={`block h-0.5 w-6 transition-all duration-300 ${
               open ? "rotate-45 translate-y-2" : ""
             }`}
-            style={{ color: "var(--navy)" }}
+            style={{ background: open ? "var(--navy)" : barColor }}
           />
           <span
-            className={`block h-0.5 w-6 transition-opacity ${
+            className={`block h-0.5 w-6 transition-all duration-300 ${
               open ? "opacity-0" : ""
             }`}
-            style={{ background: "var(--navy)" }}
+            style={{ background: open ? "var(--navy)" : barColor }}
           />
           <span
-            className={`block h-0.5 w-6 transition-transform ${
+            className={`block h-0.5 w-6 transition-all duration-300 ${
               open ? "-rotate-45 -translate-y-2" : ""
             }`}
-            style={{ background: "var(--navy)" }}
+            style={{ background: open ? "var(--navy)" : barColor }}
           />
         </button>
       </div>
