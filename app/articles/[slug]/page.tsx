@@ -6,7 +6,6 @@ import { articles, getArticle } from "@/lib/articles";
 import { brand } from "@/lib/brand";
 import { SITE_URL } from "@/lib/site";
 import ArticleBody from "@/components/ArticleBody";
-import Reveal from "@/components/Reveal";
 
 export async function generateStaticParams() {
   return articles.map((a) => ({ slug: a.slug }));
@@ -174,7 +173,7 @@ export default async function ArticlePage({
       </section>
 
       {/* BODY */}
-      <section className="py-16 md:py-20" style={{ background: "var(--off-white)" }}>
+      <section className="pt-16 pb-24 md:pt-20 md:pb-28" style={{ background: "var(--off-white)" }}>
         <div className="max-w-5xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-[1fr_220px] gap-12">
           <ArticleBody blocks={a.blocks} />
 
@@ -205,44 +204,6 @@ export default async function ArticlePage({
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="pb-24" style={{ background: "var(--off-white)" }}>
-        <div className="max-w-5xl mx-auto px-5">
-          <Reveal distance={30}>
-            <div
-              className="relative rounded-3xl p-10 md:p-14 overflow-hidden"
-              style={{ background: "var(--navy)" }}
-            >
-              <div
-                aria-hidden
-                className="pointer-events-none absolute -bottom-40 -right-20 w-[560px] h-[560px] rounded-full opacity-[0.10]"
-                style={{
-                  background:
-                    "radial-gradient(circle, var(--gold) 0%, transparent 62%)",
-                }}
-              />
-              <div className="relative max-w-xl">
-                <h2 className="font-display text-3xl md:text-4xl font-bold text-white leading-tight">
-                  Want these numbers for your agency?
-                </h2>
-                <p className="mt-4 text-base leading-relaxed" style={{ color: "#a8c0d8" }}>
-                  Book a free call with {brand.owner}. We will look at your ICP,
-                  talk through your pipeline, and tell you what we would run.
-                </p>
-                <a
-                  href={brand.calendlyUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-8 inline-block px-7 py-4 rounded font-semibold transition-transform duration-300 hover:-translate-y-0.5"
-                  style={{ background: "var(--gold)", color: "var(--navy-dark)" }}
-                >
-                  Book a Free Call
-                </a>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
     </>
   );
 }

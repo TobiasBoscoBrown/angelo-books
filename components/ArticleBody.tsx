@@ -300,17 +300,25 @@ export default function ArticleBody({ blocks }: { blocks: Block[] }) {
             return (
               <Reveal key={i} distance={30}>
                 <aside
-                  className="my-12 rounded-2xl p-8 md:p-9 border"
-                  style={{ background: "white", borderColor: "var(--line)" }}
+                  className="relative my-12 rounded-2xl p-8 md:p-10 overflow-hidden"
+                  style={{ background: "var(--navy)" }}
                 >
-                  <div className="flex flex-col sm:flex-row sm:items-start gap-6">
+                  <div
+                    aria-hidden
+                    className="pointer-events-none absolute -bottom-40 -right-16 w-[460px] h-[460px] rounded-full opacity-[0.10]"
+                    style={{
+                      background:
+                        "radial-gradient(circle, var(--gold) 0%, transparent 62%)",
+                    }}
+                  />
+                  <div className="relative flex flex-col sm:flex-row sm:items-start gap-6">
                     <Link
                       href="/about"
                       aria-label={`More about ${brand.owner}`}
                       className="flex-shrink-0 self-start rounded-full p-[3px] transition-transform duration-300 hover:-translate-y-0.5"
                       style={{
                         background:
-                          "linear-gradient(140deg, var(--gold) 0%, var(--warm-gray) 100%)",
+                          "linear-gradient(140deg, var(--gold) 0%, rgba(255,255,255,0.18) 100%)",
                       }}
                     >
                       <Image
@@ -324,20 +332,12 @@ export default function ArticleBody({ blocks }: { blocks: Block[] }) {
                     </Link>
 
                     <div className="min-w-0">
-                      <p
-                        className="font-semibold text-lg mb-1.5 flex items-center gap-2.5"
-                        style={{ color: "var(--navy)" }}
-                      >
-                        <span
-                          aria-hidden
-                          className="w-2 h-2 rounded-full flex-shrink-0"
-                          style={{ background: "var(--gold)" }}
-                        />
+                      <p className="font-display text-2xl font-bold mb-2.5 text-white leading-snug">
                         {b.title}
                       </p>
                       <p
-                        className="text-[0.975rem] leading-relaxed mb-6"
-                        style={{ color: "var(--text-mid)" }}
+                        className="text-[0.975rem] leading-relaxed mb-7"
+                        style={{ color: "#a8c0d8" }}
                       >
                         {b.text}
                       </p>
@@ -357,11 +357,8 @@ export default function ArticleBody({ blocks }: { blocks: Block[] }) {
                         </a>
                         <Link
                           href="/about"
-                          className="group inline-flex items-center gap-2 px-6 py-3 rounded border font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5"
-                          style={{
-                            color: "var(--navy)",
-                            borderColor: "var(--navy)",
-                          }}
+                          className="group inline-flex items-center gap-2 px-6 py-3 rounded border font-semibold text-sm text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/10"
+                          style={{ borderColor: "rgba(255,255,255,0.3)" }}
                         >
                           More about {brand.owner.split(" ")[0]}
                           <span
