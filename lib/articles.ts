@@ -23,6 +23,7 @@ export type Article = {
   updated: string;
   readingMinutes: number;
   keyword: string;
+  hero: { src: string; alt: string };
   blocks: Block[];
 };
 
@@ -37,6 +38,10 @@ export const articles: Article[] = [
     updated: "2026-07-14",
     readingMinutes: 7,
     keyword: "b2b cold calling conversion rate",
+    hero: {
+      src: "/articles/hero-cold-calling.webp",
+      alt: "An abstract funnel: a dense field of several hundred small blue dots narrowing downward into a small cluster of glowing gold dots, representing many dials producing few booked meetings.",
+    },
     blocks: [
       {
         t: "lead",

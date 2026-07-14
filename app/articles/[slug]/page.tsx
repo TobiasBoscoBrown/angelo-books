@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { articles, getArticle } from "@/lib/articles";
@@ -29,6 +30,7 @@ export async function generateMetadata({
       description: a.description,
       type: "article",
       url,
+      images: [{ url: a.hero.src, width: 1600, height: 900, alt: a.hero.alt }],
       publishedTime: a.published,
       modifiedTime: a.updated,
       authors: [brand.owner],
@@ -37,6 +39,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: a.title,
       description: a.description,
+      images: [a.hero.src],
     },
   };
 }
@@ -89,7 +92,7 @@ export default async function ArticlePage({
           name: brand.name,
           url: SITE_URL,
         },
-        image: `${SITE_URL}/proof/proof-2.png`,
+        image: `${SITE_URL}${a.hero.src}`,
       },
       ...(faqBlock
         ? [
@@ -118,13 +121,24 @@ export default async function ArticlePage({
         className="relative pt-36 pb-20 overflow-hidden"
         style={{ background: "var(--navy-dark)" }}
       >
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -top-48 -right-32 w-[760px] h-[760px] rounded-full opacity-[0.10]"
-          style={{
-            background: "radial-gradient(circle, var(--gold) 0%, transparent 62%)",
-          }}
-        />
+        {/* Hero art. Its background is colour-matched to --navy-dark and it is
+            masked out toward the left so the headline always sits on flat navy. */}
+        <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
+          <Image
+            src={a.hero.src}
+            alt=""
+            width={1600}
+            height={900}
+            priority
+            className="absolute right-0 top-1/2 -translate-y-1/2 h-full w-auto max-w-none opacity-90"
+            style={{
+              maskImage:
+                "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.35) 26%, #000 62%)",
+              WebkitMaskImage:
+                "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.35) 26%, #000 62%)",
+            }}
+          />
+        </div>
         <div className="relative max-w-5xl mx-auto px-5">
           <div className="rise">
             <nav
@@ -141,7 +155,7 @@ export default async function ArticlePage({
               </Link>
             </nav>
 
-            <h1 className="font-display text-4xl md:text-5xl font-bold text-white leading-[1.08] max-w-3xl tracking-[-0.02em]">
+            <h1 className="font-display text-4xl md:text-5xl font-bold text-white leading-[1.08] max-w-xl lg:max-w-2xl tracking-[-0.02em]">
               {a.h1}
             </h1>
 

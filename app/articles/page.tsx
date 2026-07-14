@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { articles } from "@/lib/articles";
 import { brand } from "@/lib/brand";
@@ -63,9 +64,20 @@ export default function ArticlesIndex() {
               <Reveal key={a.slug} delay={i * 80} distance={26}>
                 <Link
                   href={`/articles/${a.slug}`}
-                  className="group block p-8 md:p-10 rounded-2xl border transition-all duration-300 hover:-translate-y-1"
+                  className="group grid grid-cols-1 md:grid-cols-[260px_1fr] rounded-2xl border overflow-hidden transition-all duration-300 hover:-translate-y-1"
                   style={{ background: "white", borderColor: "var(--line)" }}
                 >
+                  <div className="relative overflow-hidden" style={{ background: "var(--navy-dark)" }}>
+                    <Image
+                      src={a.hero.src}
+                      alt={a.hero.alt}
+                      width={1600}
+                      height={900}
+                      className="h-full w-full object-cover min-h-[170px] transition-transform duration-700 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, 260px"
+                    />
+                  </div>
+                  <div className="p-8 md:p-10">
                   <div
                     className="flex flex-wrap items-center gap-3 text-xs mb-4"
                     style={{ color: "var(--text-soft)" }}
@@ -92,6 +104,7 @@ export default function ArticlesIndex() {
                   >
                     Read it <span aria-hidden>→</span>
                   </span>
+                  </div>
                 </Link>
               </Reveal>
             ))}
