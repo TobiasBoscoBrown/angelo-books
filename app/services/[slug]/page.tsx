@@ -44,7 +44,7 @@ export default async function ServicePage({
     <>
       {/* HERO */}
       <section
-        className="relative pt-36 pb-24 overflow-hidden"
+        className="relative pt-36 pb-32 overflow-hidden"
         style={{ background: "var(--navy-dark)" }}
       >
         <div
@@ -120,37 +120,51 @@ export default async function ServicePage({
         </div>
       </section>
 
-      {/* BEST FOR — floating card straddling the seam */}
-      <section className="relative" style={{ background: "var(--off-white)" }}>
+      {/* BEST FOR — floats up over the navy/off-white seam */}
+      <section className="relative z-10" style={{ background: "var(--off-white)" }}>
         <div className="max-w-5xl mx-auto px-5">
           <Reveal distance={30}>
             <div
-              className="-mt-12 rounded-2xl p-7 md:p-8 border flex flex-col sm:flex-row sm:items-center gap-4"
+              className="-mt-20 md:-mt-24 rounded-2xl p-8 md:p-10 border"
               style={{
                 background: "white",
                 borderColor: "var(--line)",
-                boxShadow: "0 30px 70px -34px rgba(15,37,64,0.45)",
+                boxShadow: "0 34px 80px -30px rgba(15,37,64,0.5)",
               }}
             >
-              <p
-                className="text-[11px] font-semibold uppercase tracking-[0.16em] flex-shrink-0 sm:w-32"
-                style={{ color: "var(--text-soft)" }}
-              >
-                Best for
-              </p>
-              <p
-                className="text-lg leading-snug"
-                style={{ color: "var(--navy)" }}
-              >
-                {service.bestFor}
-              </p>
+              <div className="flex items-start gap-4 md:gap-5">
+                <span
+                  aria-hidden
+                  className="flex-shrink-0 mt-1.5 w-9 h-9 rounded-full flex items-center justify-center"
+                  style={{ background: "var(--off-white)" }}
+                >
+                  <span
+                    className="w-2.5 h-2.5 rounded-full"
+                    style={{ background: "var(--gold)" }}
+                  />
+                </span>
+                <div>
+                  <p
+                    className="text-[11px] font-semibold uppercase tracking-[0.16em] mb-2.5"
+                    style={{ color: "var(--text-soft)" }}
+                  >
+                    Best for
+                  </p>
+                  <p
+                    className="font-display text-xl md:text-2xl leading-snug"
+                    style={{ color: "var(--navy)" }}
+                  >
+                    {service.bestFor}
+                  </p>
+                </div>
+              </div>
             </div>
           </Reveal>
         </div>
       </section>
 
       {/* DETAIL + PROCESS */}
-      <section className="py-20 md:py-24" style={{ background: "var(--off-white)" }}>
+      <section className="pt-16 pb-20 md:pt-20 md:pb-24" style={{ background: "var(--off-white)" }}>
         <div className="max-w-5xl mx-auto px-5">
           <Reveal>
             <p

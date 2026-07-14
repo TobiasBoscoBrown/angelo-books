@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { brand } from "@/lib/brand";
 import Reveal from "@/components/Reveal";
+import ProofGallery from "@/components/ProofGallery";
 
 export default function Proof() {
   return (
@@ -36,49 +36,11 @@ export default function Proof() {
             style={{ color: "#a8c0d8" }}
           >
             These are real client threads, posted publicly by Angelo as the
-            campaigns ran. Client names are covered. Nothing else is.
+            campaigns ran. Client names are covered. Nothing else is. Tap any one to read it full size.
           </p>
         </Reveal>
 
-        <div className="mt-14 grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {brand.proof.map((p, i) => (
-            <Reveal key={p.src} delay={i * 110} distance={34}>
-              <figure
-                className="group h-full flex flex-col rounded-2xl p-3 border transition-transform duration-500 hover:-translate-y-1.5"
-                style={{
-                  background: "rgba(255,255,255,0.045)",
-                  borderColor: "rgba(255,255,255,0.10)",
-                  boxShadow: "0 24px 60px -28px rgba(0,0,0,0.75)",
-                }}
-              >
-                <div className="rounded-xl overflow-hidden">
-                  <Image
-                    src={p.src}
-                    alt={p.alt}
-                    width={p.width}
-                    height={p.height}
-                    className="w-full h-auto block"
-                    sizes="(max-width: 1024px) 100vw, 33vw"
-                  />
-                </div>
-                <figcaption className="mt-4 px-2 pb-2">
-                  <p
-                    className="text-[11px] font-semibold uppercase tracking-[0.16em] mb-2"
-                    style={{ color: "var(--gold)" }}
-                  >
-                    {p.kicker}
-                  </p>
-                  <p
-                    className="text-sm leading-relaxed"
-                    style={{ color: "#a8c0d8" }}
-                  >
-                    {p.note}
-                  </p>
-                </figcaption>
-              </figure>
-            </Reveal>
-          ))}
-        </div>
+        <ProofGallery />
 
         <Reveal delay={220}>
           <p className="mt-10 text-sm" style={{ color: "#7d97b3" }}>
