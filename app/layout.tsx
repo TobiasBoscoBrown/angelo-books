@@ -22,11 +22,29 @@ export const metadata: Metadata = {
   title: "Angelo Books | Outbound Sales for Marketing Agencies",
   description:
     "Angelo Books fills your agency's pipeline with qualified meetings. We handle the outbound calling so you can focus on delivery. Serving marketing agencies in the US and Australia.",
+  alternates: { canonical: SITE_URL },
   openGraph: {
     title: "Angelo Books | Outbound Sales for Marketing Agencies",
     description:
       "Get in a meeting with your dream clients without the tech headache. Outbound done for you.",
     type: "website",
+    url: SITE_URL,
+    siteName: "Angelo Books",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Angelo Books: get in a meeting with your dream clients. Angelo Miguel, founder.",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Angelo Books | Outbound Sales for Marketing Agencies",
+    description:
+      "Get in a meeting with your dream clients without the tech headache. Outbound done for you.",
+    images: ["/og.png"],
   },
 };
 
