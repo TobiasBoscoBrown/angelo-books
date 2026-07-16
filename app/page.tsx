@@ -119,38 +119,19 @@ export default function Home() {
                 boxShadow: "0 40px 90px -30px rgba(0,0,0,0.8)",
               }}
             >
-              <div className="flex items-center gap-5">
-                <span
-                  className="flex-shrink-0 rounded-full p-[3px]"
-                  style={{
-                    background:
-                      "linear-gradient(140deg, var(--gold) 0%, rgba(255,255,255,0.18) 100%)",
-                  }}
+              <div>
+                <p
+                  className="text-[11px] font-semibold uppercase tracking-[0.16em] mb-3"
+                  style={{ color: "var(--gold)" }}
                 >
-                  <Image
-                    src="/angelo.png"
-                    alt="Angelo Miguel, founder of Angelo Books"
-                    width={240}
-                    height={240}
-                    priority
-                    className="block rounded-full w-[132px] h-[132px] object-cover"
-                    style={{ background: "white" }}
-                  />
-                </span>
-                <div className="min-w-0">
-                  <p
-                    className="text-[11px] font-semibold uppercase tracking-[0.16em] mb-2"
-                    style={{ color: "var(--gold)" }}
-                  >
-                    The founder
-                  </p>
-                  <p className="font-display text-3xl font-bold text-white leading-tight">
-                    {brand.owner}
-                  </p>
-                  <p className="text-sm mt-1" style={{ color: "#a8c0d8" }}>
-                    {brand.founderRole}, {brand.name}
-                  </p>
-                </div>
+                  The founder
+                </p>
+                <p className="font-display text-4xl font-bold text-white leading-tight">
+                  {brand.owner}
+                </p>
+                <p className="text-sm mt-2" style={{ color: "#a8c0d8" }}>
+                  {brand.founderRole}, {brand.name}
+                </p>
               </div>
 
               <blockquote
@@ -165,7 +146,6 @@ export default function Home() {
 
               <dl className="mt-7 space-y-3 text-sm">
                 {[
-                  { k: "Based in", v: brand.location },
                   { k: "Serving", v: brand.serving.join(" + ") },
                   { k: "Operation", v: `${brand.type}, since ${brand.founded}` },
                 ].map((row) => (

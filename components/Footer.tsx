@@ -53,10 +53,6 @@ export default function Footer() {
               <li key={s}>{s}</li>
             ))}
           </ul>
-          <p className="text-xs mt-6" style={{ color: "#8fa8c0" }}>
-            Based in {brand.location}
-          </p>
-
           <p className="text-xs font-semibold uppercase tracking-widest mt-8 mb-3 text-white">
             Follow Angelo
           </p>

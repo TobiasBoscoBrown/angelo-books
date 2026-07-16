@@ -6,7 +6,6 @@ export const brand = {
   phone: "",
   email: "",
   calendlyUrl: "https://bit.ly/angelobooks",
-  location: "Sta. Rosa, Laguna, Philippines",
   serving: ["United States", "Australia"],
   icpDescription: "Marketing agencies serving local trades and service businesses",
   founded: "2024",

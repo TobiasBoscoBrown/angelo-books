@@ -79,11 +79,10 @@ export default function About() {
             </p>
             <p className="mt-5 leading-relaxed">
               Angelo Miguel started Angelo Books to fix that. As a
-              family-operated outbound agency based in Sta. Rosa, Laguna,
-              Angelo works directly with marketing agencies selling to local
-              service businesses in the US and Australia, handling everything
-              from building the prospect list to booking the meeting and writing
-              the prep brief.
+              family-operated outbound agency, Angelo works directly with
+              marketing agencies selling to local service businesses in the US
+              and Australia, handling everything from building the prospect list
+              to booking the meeting and writing the prep brief.
             </p>
             <p className="mt-5 leading-relaxed">
               There is no account manager in the way. No hand-off to a junior
@@ -111,7 +110,6 @@ export default function About() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {[
                 { label: "Agency type", value: brand.type },
-                { label: "Based in", value: brand.location },
                 { label: "Markets served", value: brand.serving.join(", ") },
                 { label: "Clients", value: brand.icpDescription },
               ].map((d) => (
