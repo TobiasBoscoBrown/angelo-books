@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Angelo Miguel | Angelo Books",
   description:
-    "Angelo Books is a family-operated outbound sales agency run by Angelo Miguel. We book qualified meetings for marketing agencies in the US and Australia.",
+    "Angelo Books is a specialist outbound sales agency run by Angelo Miguel. We book qualified meetings for marketing agencies selling to local trades and service businesses in the US and Australia.",
 };
 
 export default function About() {
@@ -78,11 +78,11 @@ export default function About() {
               and blast them with generic emails. The pipeline stays thin.
             </p>
             <p className="mt-5 leading-relaxed">
-              Angelo Miguel started Angelo Books to fix that. As a
-              family-operated outbound agency, Angelo works directly with
-              marketing agencies selling to local service businesses in the US
-              and Australia, handling everything from building the prospect list
-              to booking the meeting and writing the prep brief.
+              Angelo Miguel started Angelo Books to fix that. Angelo works
+              directly with marketing agencies selling to local service
+              businesses in the US and Australia, handling everything from
+              building the prospect list to booking the meeting and writing the
+              prep brief. It is the only category the agency takes on.
             </p>
             <p className="mt-5 leading-relaxed">
               There is no account manager in the way. No hand-off to a junior

@@ -6,6 +6,8 @@ import Faq from "@/components/Faq";
 import Proof from "@/components/Proof";
 import Reveal from "@/components/Reveal";
 
+const snapshot = brand.results.slice(0, 3);
+
 export default function Home() {
   return (
     <>
@@ -101,14 +103,14 @@ export default function Home() {
                   color: "#8fa8c0",
                 }}
               >
-                <span>Family-operated agency</span>
+                <span>Outbound only</span>
                 <span>US + Australia</span>
                 <span>Marketing agency specialists</span>
               </div>
             </div>
           </div>
 
-          {/* Founder card */}
+          {/* Proof first, founder second */}
           <div className="rise relative hidden md:block" style={{ animationDelay: "160ms" }}>
             <div
               className="rounded-3xl p-8 border"
@@ -119,79 +121,90 @@ export default function Home() {
                 boxShadow: "0 40px 90px -30px rgba(0,0,0,0.8)",
               }}
             >
-              <div>
-                <p
-                  className="text-[11px] font-semibold uppercase tracking-[0.16em] mb-3"
-                  style={{ color: "var(--gold)" }}
+              <div
+                className="rounded-2xl p-7"
+                style={{ background: "rgba(255,255,255,0.06)" }}
+              >
+                <div className="flex items-baseline justify-between mb-6">
+                  <p
+                    className="text-[11px] font-semibold uppercase tracking-[0.16em]"
+                    style={{ color: "var(--gold)" }}
+                  >
+                    One week of dialing
+                  </p>
+                  <p className="text-[11px]" style={{ color: "#7d97b3" }}>
+                    Mar 31 – Apr 4
+                  </p>
+                </div>
+
+                <div className="space-y-5">
+                  {snapshot.map((r) => (
+                    <div key={r.label} className="flex items-baseline gap-5">
+                      <span
+                        className="font-display text-5xl font-bold tabular-nums leading-none w-24 flex-shrink-0"
+                        style={{ color: "var(--gold)" }}
+                      >
+                        {r.metric}
+                      </span>
+                      <span className="text-sm" style={{ color: "#a8c0d8" }}>
+                        {r.label}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+
+                <div
+                  className="mt-7 pt-5 border-t text-sm italic"
+                  style={{
+                    borderColor: "rgba(255,255,255,0.15)",
+                    color: "#a8c0d8",
+                  }}
                 >
-                  The founder
-                </p>
-                <p className="font-display text-4xl font-bold text-white leading-tight">
-                  {brand.owner}
-                </p>
-                <p className="text-sm mt-2" style={{ color: "#a8c0d8" }}>
-                  {brand.founderRole}, {brand.name}
-                </p>
+                  &ldquo;Excellent work!&rdquo; &mdash; client feedback
+                </div>
               </div>
 
-              <blockquote
-                className="mt-7 pt-6 border-t font-display text-xl italic leading-snug"
-                style={{
-                  borderColor: "rgba(255,255,255,0.14)",
-                  color: "var(--gold-light)",
-                }}
+              <Link
+                href="#proof"
+                className="mt-6 block w-full py-3.5 rounded font-semibold text-sm text-center transition-transform duration-300 hover:-translate-y-0.5"
+                style={{ background: "var(--gold)", color: "var(--navy-dark)" }}
               >
-                &ldquo;{brand.founderQuote}&rdquo;
-              </blockquote>
+                See the receipts
+              </Link>
 
-              <dl className="mt-7 space-y-3 text-sm">
-                {[
-                  { k: "Serving", v: brand.serving.join(" + ") },
-                  { k: "Operation", v: `${brand.type}, since ${brand.founded}` },
-                ].map((row) => (
-                  <div key={row.k} className="flex gap-4">
-                    <dt
-                      className="w-20 flex-shrink-0 text-[11px] font-semibold uppercase tracking-[0.12em] pt-0.5"
-                      style={{ color: "#7d97b3" }}
-                    >
-                      {row.k}
-                    </dt>
-                    <dd style={{ color: "#c8d6e5" }}>{row.v}</dd>
-                  </div>
-                ))}
-              </dl>
-
+              {/* compact founder strip */}
               <div
-                className="mt-7 pt-6 border-t flex items-center gap-3"
-                style={{ borderColor: "rgba(255,255,255,0.14)" }}
+                className="mt-6 pt-6 border-t flex items-center justify-between gap-4"
+                style={{ borderColor: "rgba(255,255,255,0.12)" }}
               >
-                <a
-                  href={brand.threads}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 py-2.5 rounded text-xs font-semibold text-center border transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/10"
-                  style={{ borderColor: "rgba(255,255,255,0.22)", color: "white" }}
-                >
-                  Threads
-                </a>
-                <a
-                  href={brand.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 py-2.5 rounded text-xs font-semibold text-center border transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/10"
-                  style={{ borderColor: "rgba(255,255,255,0.22)", color: "white" }}
-                >
-                  LinkedIn
-                </a>
-                <a
-                  href={brand.calendlyUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 py-2.5 rounded text-xs font-semibold text-center transition-transform duration-300 hover:-translate-y-0.5"
-                  style={{ background: "var(--gold)", color: "var(--navy-dark)" }}
-                >
-                  Book a call
-                </a>
+                <div className="min-w-0">
+                  <p className="text-sm font-semibold text-white truncate">
+                    {brand.owner}
+                  </p>
+                  <p className="text-xs mt-0.5" style={{ color: "#7d97b3" }}>
+                    {brand.founderRole}, runs every campaign
+                  </p>
+                </div>
+                <div className="flex items-center gap-2 flex-shrink-0">
+                  <a
+                    href={brand.threads}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-1.5 rounded text-[11px] font-semibold border text-white transition-all duration-300 hover:bg-white/10"
+                    style={{ borderColor: "rgba(255,255,255,0.22)" }}
+                  >
+                    Threads
+                  </a>
+                  <a
+                    href={brand.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-1.5 rounded text-[11px] font-semibold border text-white transition-all duration-300 hover:bg-white/10"
+                    style={{ borderColor: "rgba(255,255,255,0.22)" }}
+                  >
+                    LinkedIn
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -327,16 +340,17 @@ export default function Home() {
               className="font-display text-4xl md:text-5xl font-bold mb-6 leading-[1.08] tracking-[-0.02em]"
               style={{ color: "var(--navy)" }}
             >
-              A family operation, <br />
-              not an account manager.
+              Outbound is all <br />
+              we do.
             </h2>
             <p
               className="text-base leading-relaxed mb-5"
               style={{ color: "var(--text-mid)" }}
             >
-              Angelo Books is a family-operated outbound agency built for one
-              purpose: booking qualified meetings for marketing agencies that
-              sell to local service businesses in the US and Australia.
+              Angelo Books does one thing: booking qualified meetings for
+              marketing agencies that sell to local trades and service
+              businesses in the US and Australia. That is the only category we
+              work in, so we are not learning your market on your budget.
             </p>
             <p
               className="text-base leading-relaxed mb-9"

@@ -9,7 +9,7 @@ export const brand = {
   serving: ["United States", "Australia"],
   icpDescription: "Marketing agencies serving local trades and service businesses",
   founded: "2024",
-  type: "Family-operated startup",
+  type: "Specialist outbound agency",
   threads: "https://www.threads.com/@justangeloing",
   linkedin: "https://www.linkedin.com/in/angelo-miguel-999b612a4/",
   founderRole: "Founder",
@@ -220,24 +220,36 @@ export const brand = {
 
   faqs: [
     {
-      q: "Who is Angelo Books for?",
-      a: "Marketing agencies that sell web design, SEO, paid ads, or AI and automation services to local businesses in the US or Australia. If your team is great at delivery but struggles to fill the pipeline, we handle the outbound so you do not have to.",
+      q: "Why should I trust your numbers?",
+      a: "Because you can read them yourself. The dial counts and appointment counts on this site are screenshots of the actual client threads, posted publicly as the campaigns ran. Every campaign gets a weekly report with dials made, contacts reached, appointments set, and show rate. If a number looks good, you will be able to see where it came from.",
     },
     {
-      q: "Do I need to provide the contact list?",
-      a: "No. We build the targeted list based on your ideal client profile, then work it. You can provide one if you have it, but it is not required.",
+      q: "What if it does not work?",
+      a: "You are not locked in. We work on a campaign basis, so if the campaign is not producing you stop, and you will know it is not producing because the reporting says so every week. There is no long-term contract to unwind.",
+    },
+    {
+      q: "How do I know your callers understand what we sell?",
+      a: "Our callers are trained on your offer and your ideal client profile before a single dial goes out. Setup and scripting take a few days for exactly that reason. We only work with marketing agencies selling to local trades and service businesses, so we are not learning your category from scratch on your dime.",
+    },
+    {
+      q: "Why not just hire an SDR in-house?",
+      a: "You can, and some agencies should. It means recruiting for a role you have probably never done yourself, then training and managing it, and carrying that before it produces. With us the dialing starts in days and stops whenever you want. If you would rather own the motion, we will build you the scripts, sequencing, and lists and hand it over.",
+    },
+    {
+      q: "Who actually runs my campaign?",
+      a: "Angelo. The person who picks up your call is the person on the phone for your campaign. There is no account manager in the middle and no hand-off to a junior rep after you sign.",
+    },
+    {
+      q: "Do I need to bring a contact list?",
+      a: "No. We build the targeted list from your ideal client profile. If you already have a list you would rather we work, we will work yours instead.",
     },
     {
       q: "How long before I see booked meetings?",
-      a: "Most campaigns start producing appointments within the first week of dialing. Setup and scripting take a few days before we go live.",
+      a: "Setup and scripting take a few days before we go live. Most campaigns start producing appointments within the first week of dialing. One campaign on this site booked four appointments in a single day.",
     },
     {
-      q: "Is this a long-term contract?",
-      a: "No. We work on a campaign basis so you stay in control. Book a call and we will talk through what makes sense for your situation.",
-    },
-    {
-      q: "What makes Angelo Books different from a large outbound agency?",
-      a: "We are a small, family-operated team. You deal with Angelo directly, not an account manager. That means faster communication, real accountability, and a team that actually cares whether your campaigns perform.",
+      q: "Is Angelo Books right for my agency?",
+      a: "We are built for marketing agencies that sell web design, SEO, paid ads, or AI and automation to local businesses in the US or Australia. If your team is great at delivery and thin at the front of the pipeline, that is the gap we fill. If you sell enterprise software, we are the wrong call.",
     },
   ],
 };
