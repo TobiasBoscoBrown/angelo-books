@@ -218,6 +218,66 @@ export const brand = {
     },
   ],
 
+  // Businesses that hired Angelo to run outbound. Logos supplied by Angelo.
+  clients: [
+    {
+      src: "/clients/build-my-tribe.png",
+      width: 196,
+      height: 27,
+      name: "Build My Tribe",
+      alt: "Build My Tribe logo",
+    },
+    {
+      src: "/clients/localsearch.png",
+      width: 148,
+      height: 35,
+      name: "localsearch",
+      alt: "localsearch logo",
+    },
+    {
+      src: "/clients/nick-tann.png",
+      width: 187,
+      height: 21,
+      name: "Nick Tann",
+      alt: "Nick Tann logo",
+    },
+    {
+      src: "/clients/revstar.png",
+      width: 93,
+      height: 56,
+      name: "Revstar",
+      alt: "Revstar logo",
+    },
+    {
+      src: "/clients/dania-accounting.png",
+      width: 108,
+      height: 48,
+      name: "Dania Accounting",
+      alt: "Dania Accounting logo",
+    },
+    {
+      src: "/clients/elysian-construction.png",
+      width: 106,
+      height: 49,
+      name: "Elysian Construction",
+      alt: "Elysian Construction logo",
+    },
+    {
+      src: "/clients/unknown-bulb.png",
+      width: 48,
+      height: 72,
+      name: null,
+      alt: "Client logo",
+    },
+    {
+      src: "/clients/unknown-mark.png",
+      width: 83,
+      height: 63,
+      name: null,
+      alt: "Client logo",
+    },
+  ],
+
   faqs: [
     {
       q: "Why should I trust your numbers?",

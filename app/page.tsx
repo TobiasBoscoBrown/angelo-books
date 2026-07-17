@@ -4,6 +4,7 @@ import { brand } from "@/lib/brand";
 import { articles } from "@/lib/articles";
 import Faq from "@/components/Faq";
 import Proof from "@/components/Proof";
+import ClientWall from "@/components/ClientWall";
 import Reveal from "@/components/Reveal";
 
 const snapshot = brand.results.slice(0, 3);
@@ -210,6 +211,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <ClientWall />
 
       {/* SERVICES */}
       <section
