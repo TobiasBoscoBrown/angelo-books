@@ -38,7 +38,6 @@ export default async function ServicePage({
   if (!service) notFound();
 
   const others = brand.services.filter((s) => s.slug !== slug);
-  const index = brand.services.findIndex((s) => s.slug === slug);
 
   return (
     <>
@@ -70,7 +69,7 @@ export default async function ServicePage({
                 href="/#services"
                 className="transition-colors hover:text-white"
               >
-                Services
+                What I do
               </Link>
               <span aria-hidden>/</span>
               <span style={{ color: "var(--gold)" }}>{service.name}</span>
@@ -80,7 +79,7 @@ export default async function ServicePage({
               className="text-xs font-semibold uppercase tracking-[0.18em] mb-4"
               style={{ color: "var(--gold)" }}
             >
-              Service {String(index + 1).padStart(2, "0")}
+              The service
             </p>
             <h1 className="font-display text-4xl md:text-6xl font-bold text-white leading-[1.05] max-w-3xl">
               {service.name}
@@ -106,14 +105,14 @@ export default async function ServicePage({
                 className="px-7 py-4 font-semibold rounded text-center transition-transform duration-300 hover:-translate-y-0.5"
                 style={{ background: "var(--gold)", color: "var(--navy-dark)" }}
               >
-                Book a Free Strategy Call
+                Book a Call
               </a>
               <Link
-                href="/#proof"
+                href="/#pilot"
                 className="px-7 py-4 font-semibold rounded border text-center text-white transition-transform duration-300 hover:-translate-y-0.5"
                 style={{ borderColor: "rgba(255,255,255,0.28)" }}
               >
-                See the receipts
+                See the pilot
               </Link>
             </div>
           </Reveal>
@@ -291,16 +290,15 @@ export default async function ServicePage({
               />
               <div className="relative max-w-xl">
                 <h2 className="font-display text-3xl md:text-4xl font-bold text-white leading-tight">
-                  Ready to get started?
+                  Start with a pilot.
                 </h2>
                 <p
                   className="mt-4 text-base leading-relaxed"
                   style={{ color: "#a8c0d8" }}
                 >
-                  Book a free call with {brand.owner} and talk through whether{" "}
-                  {service.name.toLowerCase()} is what your agency needs right
-                  now. You will be talking to the person who runs your campaign,
-                  not an account manager.
+                  Book a call with {brand.owner} and talk through what you sell,
+                  who you want to reach, and whether a pilot is worth running.
+                  You will be talking to the person who runs your campaign.
                 </p>
                 <a
                   href={brand.calendlyUrl}
@@ -309,7 +307,7 @@ export default async function ServicePage({
                   className="mt-8 inline-block px-7 py-4 rounded font-semibold transition-transform duration-300 hover:-translate-y-0.5"
                   style={{ background: "var(--gold)", color: "var(--navy-dark)" }}
                 >
-                  Book a Free Call
+                  Book a Call
                 </a>
               </div>
             </div>

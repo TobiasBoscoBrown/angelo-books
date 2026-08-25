@@ -19,14 +19,14 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Angelo Books | Outbound Sales for Marketing Agencies",
+  title: "Angelo Books | Managed Cold Calling for AI Companies and B2B",
   description:
-    "Angelo Books fills your agency's pipeline with qualified meetings. We handle the outbound calling so you can focus on delivery. Serving marketing agencies in the US and Australia.",
+    "Managed cold-calling campaigns for growing AI companies and select B2B businesses with a proven offer. Start with a $500 pilot: 500 dials over two weeks. US and Australia.",
   alternates: { canonical: SITE_URL },
   openGraph: {
-    title: "Angelo Books | Outbound Sales for Marketing Agencies",
+    title: "Angelo Books | Managed Cold Calling for AI Companies and B2B",
     description:
-      "Get in a meeting with your dream clients without the tech headache. Outbound done for you.",
+      "Cold calling, run for you. A $500 pilot tells you whether it works for your offer.",
     type: "website",
     url: SITE_URL,
     siteName: "Angelo Books",
@@ -35,15 +35,15 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "Angelo Books: get in a meeting with your dream clients. Angelo Miguel, founder.",
+        alt: "Angelo Books: managed cold-calling campaigns for AI companies and B2B. Angelo Miguel, founder.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Angelo Books | Outbound Sales for Marketing Agencies",
+    title: "Angelo Books | Managed Cold Calling for AI Companies and B2B",
     description:
-      "Get in a meeting with your dream clients without the tech headache. Outbound done for you.",
+      "Cold calling, run for you. A $500 pilot tells you whether it works for your offer.",
     images: ["/og.png"],
   },
 };

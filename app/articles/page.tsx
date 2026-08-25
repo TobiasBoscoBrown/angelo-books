@@ -9,7 +9,7 @@ import Reveal from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "Articles | Angelo Books",
   description:
-    "Notes on outbound sales for marketing agencies, written from real campaign data. No industry averages, no projections.",
+    "Notes on cold calling, written from real campaign data. No industry averages, no projections.",
   alternates: { canonical: `${SITE_URL}/articles` },
 };
 
@@ -44,7 +44,7 @@ export default function ArticlesIndex() {
               Articles
             </p>
             <h1 className="font-display text-4xl md:text-6xl font-bold text-white leading-[1.05] max-w-3xl tracking-[-0.02em]">
-              Outbound, with the numbers attached.
+              Cold calling, with the numbers attached.
             </h1>
             <p
               className="mt-6 text-lg leading-relaxed max-w-2xl"

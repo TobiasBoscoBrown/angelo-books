@@ -1,168 +1,156 @@
 export const brand = {
   name: "Angelo Books",
   owner: "Angelo Miguel",
-  tagline: "Get in a meeting with your dream clients without the tech headache.",
-  subTagline: "Outbound sales done for you, so your marketing agency can focus on delivery.",
+  tagline:
+    "Managed cold-calling campaigns for growing AI companies and select B2B businesses with a proven offer.",
+  subTagline:
+    "Cold calling is the whole service. I build the list, make the calls, and hand over the conversations worth having.",
   phone: "",
   email: "",
   calendlyUrl: "https://bit.ly/angelobooks",
   serving: ["United States", "Australia"],
-  icpDescription: "Marketing agencies serving local trades and service businesses",
+  icpDescription:
+    "Growing AI companies and select B2B businesses with a proven offer",
   founded: "2024",
-  type: "Specialist outbound agency",
+  type: "Managed cold-calling campaigns",
   threads: "https://www.threads.com/@justangeloing",
   linkedin: "https://www.linkedin.com/in/angelo-miguel-999b612a4/",
   founderRole: "Founder",
-  // Angelo's own words, from his Threads posts.
-  founderQuote: "I book qualified meetings for marketing agencies in the US and AU.",
+  // How Angelo describes the business now that the focus is AI companies.
+  founderQuote:
+    "I run cold-calling campaigns for AI companies and B2B businesses that already have something people buy.",
   accentColor: "#1a3a5c",
+
+  // One core service. Everything else on this site supports it rather than
+  // sitting beside it as a separate thing to buy.
   services: [
     {
-      slug: "outbound-calling",
-      name: "Outbound Calling",
-      tagline: "We dial. You close.",
+      slug: "cold-calling",
+      name: "Cold Calling",
+      tagline: "One service, done properly.",
       description:
-        "We dial on your behalf, work through targeted prospect lists, and book qualified appointments directly onto your calendar. You show up to close.",
+        "Managed cold-calling campaigns. I learn your offer, work a targeted list, make the calls, and hand over the conversations that are actually worth your time.",
       detail:
-        "Our callers are trained on your agency's offer and ICP before a single dial goes out. We handle objection handling, follow-up sequencing, and reporting so you have full visibility without doing the work.",
+        "Cold calling is the only thing I sell. The list, the script, the call notes and the weekly reporting all exist to make the calling work. They are part of the campaign, not extras with their own price tag.",
       bestFor:
-        "Agencies with a proven offer and no consistent way to get in front of new prospects.",
+        "AI companies and established B2B businesses with a proven offer, a few paying customers, and someone who can run the demo and close.",
       steps: [
         {
-          title: "We learn your offer",
+          title: "We get your offer straight",
           body:
-            "Before a single dial goes out, our callers are trained on what your agency sells and who it sells to. Setup and scripting take a few days.",
+            "Before anyone dials, I need to know what you sell, who buys it, and why the last few customers said yes. That conversation is the foundation of the campaign.",
         },
         {
-          title: "We build the list",
+          title: "We sort out the list",
           body:
-            "We build a targeted prospect list from your ideal client profile. If you already have a list, we will work yours instead.",
+            "You bring the list, or I build one from your ideal customer profile. Either way we agree on who is being called before the calling starts.",
         },
         {
-          title: "We dial and qualify",
+          title: "I make the calls",
           body:
-            "We work the list, handle objections on the call, and run the follow-up sequence on anyone who is not ready yet.",
+            "Real calls on every campaign day, with objections handled live and notes written down while the conversation is still fresh.",
         },
         {
-          title: "The meeting lands on your calendar",
+          title: "You get the conversations worth having",
           body:
-            "Qualified appointments go straight onto your calendar. Most campaigns start producing appointments within the first week of dialing.",
+            "Right person, right context, ready to talk. Or the right person with the timing wrong, worth a nurture. Those come to you with the context attached.",
+        },
+        {
+          title: "We adjust from what the phone says",
+          body:
+            "Calls tell you things a dashboard cannot: which segment engages, which line lands, where the offer gets pushback. We change the targeting and the messaging from that.",
         },
       ],
       deliverables: [
-        "A targeted prospect list built from your ICP",
-        "Callers trained on your offer before dialing starts",
-        "Objection handling on every call",
-        "Follow-up sequencing for prospects who are not ready yet",
-        "Qualified appointments booked onto your calendar",
-        "Reporting on what the campaign is doing",
-      ],
-    },
-    {
-      slug: "meeting-prep",
-      name: "Meeting Preparation",
-      tagline: "Walk in already knowing them.",
-      description:
-        "Every booked meeting comes with a prep brief: who the prospect is, what pain points surfaced on the call, and the best angle to open with.",
-      detail:
-        "You walk into every sales conversation already knowing the prospect's situation. No cold openers, no wasted first five minutes.",
-      bestFor:
-        "Agency owners who close well but lose the first five minutes of every call getting oriented.",
-      steps: [
-        {
-          title: "We capture the call",
-          body:
-            "The pain points a prospect raises on the qualifying call get written down while they are still fresh.",
-        },
-        {
-          title: "We write the brief",
-          body:
-            "Who the prospect is, what surfaced on the call, and the angle we would open with.",
-        },
-        {
-          title: "You get it before the meeting",
-          body:
-            "The brief reaches you ahead of the conversation, so you are not opening cold.",
-        },
-      ],
-      deliverables: [
-        "A prep brief for every booked meeting",
-        "Who the prospect is and what they do",
-        "The pain points they raised on the qualifying call",
-        "A recommended angle to open with",
-      ],
-    },
-    {
-      slug: "campaign-reporting",
-      name: "Campaign Reporting",
-      tagline: "Numbers, not vanity metrics.",
-      description:
-        "Clear, honest reporting on every campaign: dials made, contacts reached, appointments set, and show rate. No vanity metrics.",
-      detail:
-        "We track what matters and share it with you weekly so you always know where the pipeline stands and where to adjust.",
-      bestFor:
-        "Owners who have been burned by agencies that report activity instead of outcomes.",
-      steps: [
-        {
-          title: "We track the campaign as it runs",
-          body:
-            "Dials made, contacts reached, appointments set, and show rate. The numbers that say whether this is working.",
-        },
-        {
-          title: "You get it weekly",
-          body:
-            "A weekly read on where the pipeline stands, sent to you rather than buried in a dashboard you have to go find.",
-        },
-        {
-          title: "We adjust from it",
-          body:
-            "The reporting is what tells us where to change the script, the list, or the targeting.",
-        },
-      ],
-      deliverables: [
-        "Dials made",
-        "Contacts reached",
-        "Appointments set",
-        "Show rate",
-        "A weekly read on where the pipeline stands",
-      ],
-    },
-    {
-      slug: "outbound-systems",
-      name: "Outbound Systems Setup",
-      tagline: "The infrastructure you are missing.",
-      description:
-        "We build the outbound infrastructure your agency is missing: call scripts, sequencing, CRM tagging, and contact lists targeted to your niche.",
-      detail:
-        "If you have never run an outbound motion before, we set it up from scratch. If you have one that is underperforming, we audit and fix it.",
-      bestFor:
-        "Agencies standing up outbound for the first time, or fixing a motion that is not producing.",
-      steps: [
-        {
-          title: "We audit what you have",
-          body:
-            "If there is an existing outbound motion, we find why it is underperforming. If there is nothing, we start from scratch.",
-        },
-        {
-          title: "We build the pieces",
-          body:
-            "Call scripts, sequencing, CRM tagging, and contact lists targeted to your niche.",
-        },
-        {
-          title: "You own it",
-          body:
-            "The system is yours. Run it with your team, or have us run it for you.",
-        },
-      ],
-      deliverables: [
-        "Call scripts written for your offer",
-        "Follow-up sequencing",
-        "CRM tagging structure",
-        "Contact lists targeted to your niche",
-        "An audit of your existing motion, if you have one",
+        "Calls made on your behalf on every campaign day",
+        "A script and messaging built around your offer, adjusted as the calls come back",
+        "List building, or work from the list you already have",
+        "Context on every conversation handed over: who they are, what they said, and why it matters",
+        "Weekly reporting on dials, conversations and outcomes",
+        "Honest feedback on what the market is telling us about your offer and targeting",
       ],
     },
   ],
+
+  // The pieces that make the calling work. Deliberately not sold separately.
+  supporting: [
+    {
+      name: "List building",
+      body:
+        "A targeted list built from your ideal customer profile, or a pass over the list you already have. Available as a $200 add-on to the pilot.",
+    },
+    {
+      name: "Messaging and script",
+      body:
+        "The opener, the qualifying questions and the objection handling, written for your offer and rewritten as the calls come back.",
+    },
+    {
+      name: "Call context",
+      body:
+        "Every conversation handed to you comes with who the person is, what they said, and the angle I would open with.",
+    },
+    {
+      name: "Weekly reporting",
+      body:
+        "Dials, conversations, outcomes, and what the calls are saying about the market. Sent to you, not buried in a dashboard.",
+    },
+  ],
+
+  pilot: {
+    price: "$500",
+    priceNote: "upfront",
+    dials: "500 dials",
+    window: "2 weeks",
+    summary:
+      "A two-week pilot to find out whether cold calling works for your offer.",
+    body:
+      "It is a test, not a meeting quota. Some pilots book meetings in the first week. Some tell you the targeting is wrong, or that the offer needs a different opener, and that is worth knowing before you spend months on it.",
+    outcomes: [
+      "Meetings booked",
+      "Demo interest worth following up",
+      "Nurture opportunities for later",
+      "Actionable feedback on your market, offer and targeting",
+      "A read on where you are losing people: no-shows, or the sales process itself",
+    ],
+    addon: {
+      name: "List building",
+      price: "$200",
+      body:
+        "Add list building to the pilot and every lead called during those two weeks is yours to keep afterwards. Bring your own list and it stays yours. Nothing changes.",
+    },
+    honest:
+      "I will not promise you a number of meetings. Anyone who does, before a single call has been made for your offer, is guessing.",
+  },
+
+  ongoing: {
+    title: "After the pilot",
+    body:
+      "If the pilot says cold calling works for you, we keep going. On an ongoing campaign I endorse the qualified conversations: right person and right context, or the right person with the timing wrong and worth nurturing.",
+    endorsed: [
+      "Right person, right context, ready to talk now",
+      "Right person, right context, wrong timing, worth nurturing",
+    ],
+    note:
+      "Leads that never qualify do not get handed over. The service is cold calling, not database delivery.",
+  },
+
+  fit: {
+    yes: [
+      "You are an AI company or an established B2B business",
+      "You already have a few paying customers",
+      "You know who you want to target",
+      "You have someone who can handle demos and close",
+      "You want to test or scale cold calling",
+    ],
+    no: [
+      "You are still trying to get your first customer",
+      "You are unsure who your ideal customer is",
+      "You need me to handle the entire sale",
+      "You only want to pay when a deal closes",
+      "You expect guaranteed meetings or customers",
+    ],
+  },
+
   results: [
     {
       metric: "390",
@@ -280,36 +268,36 @@ export const brand = {
 
   faqs: [
     {
+      q: "What do I get for the $500 pilot?",
+      a: "500 dials over two weeks, made for your offer, plus the script, the call notes and a weekly read on what is happening. The point of the pilot is to find out whether cold calling works for what you sell. You may get meetings, demo interest or nurture opportunities out of it. You will definitely get an honest read on your market, your targeting and where conversations are falling over.",
+    },
+    {
+      q: "Will the pilot get me meetings?",
+      a: "It might, and campaigns have booked meetings in the first week before. I am not going to promise you a number before a single call has been made for your offer. What the pilot guarantees is 500 real dials and an honest account of what came back.",
+    },
+    {
+      q: "Do you build the list, or do I bring one?",
+      a: "Either. Add list building to the pilot for $200 and every lead called during those two weeks is yours to keep afterwards. If you already have a list you would rather I work, I will work yours and it stays yours.",
+    },
+    {
+      q: "What happens after the pilot?",
+      a: "If the calling works for you, we run an ongoing campaign. On those I endorse the qualified conversations: right person and right context, or the right person with the timing wrong, which is worth nurturing. Leads that never qualify do not get handed over. The service is cold calling, not database delivery.",
+    },
+    {
+      q: "Why AI companies?",
+      a: "AI companies tend to have a real product, a market moving quickly, and founders too busy building to spend their afternoons on the phone. Calling also cuts through in a category where every inbox is already full of AI pitches. I still take on select B2B businesses with a proven offer, so if that is you, the conversation is worth having.",
+    },
+    {
+      q: "Who actually makes the calls?",
+      a: "Me. Angelo Books is founder-led: I stay directly involved in the campaign, the messaging and the quality control. As the business grows I will bring on a small team, and the standard for what gets said on your behalf stays mine.",
+    },
+    {
+      q: "Do you work on commission, or per meeting booked?",
+      a: "No. You pay for the calling, not for outcomes I do not control. Whether a booked meeting turns into a customer depends on your demo, your pricing and your follow-up. If you only want to pay when a deal closes, we are not a fit.",
+    },
+    {
       q: "Why should I trust your numbers?",
-      a: "Because you can read them yourself. The dial counts and appointment counts on this site are screenshots of the actual client threads, posted publicly as the campaigns ran. Every campaign gets a weekly report with dials made, contacts reached, appointments set, and show rate. If a number looks good, you will be able to see where it came from.",
-    },
-    {
-      q: "What if it does not work?",
-      a: "You are not locked in. We work on a campaign basis, so if the campaign is not producing you stop, and you will know it is not producing because the reporting says so every week. There is no long-term contract to unwind.",
-    },
-    {
-      q: "How do I know your callers understand what we sell?",
-      a: "Our callers are trained on your offer and your ideal client profile before a single dial goes out. Setup and scripting take a few days for exactly that reason. We only work with marketing agencies selling to local trades and service businesses, so we are not learning your category from scratch on your dime.",
-    },
-    {
-      q: "Why not just hire an SDR in-house?",
-      a: "You can, and some agencies should. It means recruiting for a role you have probably never done yourself, then training and managing it, and carrying that before it produces. With us the dialing starts in days and stops whenever you want. If you would rather own the motion, we will build you the scripts, sequencing, and lists and hand it over.",
-    },
-    {
-      q: "Who actually runs my campaign?",
-      a: "Angelo. The person who picks up your call is the person on the phone for your campaign. There is no account manager in the middle and no hand-off to a junior rep after you sign.",
-    },
-    {
-      q: "Do I need to bring a contact list?",
-      a: "No. We build the targeted list from your ideal client profile. If you already have a list you would rather we work, we will work yours instead.",
-    },
-    {
-      q: "How long before I see booked meetings?",
-      a: "Setup and scripting take a few days before we go live. Most campaigns start producing appointments within the first week of dialing. One campaign on this site booked four appointments in a single day.",
-    },
-    {
-      q: "Is Angelo Books right for my agency?",
-      a: "We are built for marketing agencies that sell web design, SEO, paid ads, or AI and automation to local businesses in the US or Australia. If your team is great at delivery and thin at the front of the pipeline, that is the gap we fill. If you sell enterprise software, we are the wrong call.",
+      a: "Because you can read them yourself. The dial counts and appointment counts on this site are screenshots of the actual client threads, posted publicly as the campaigns ran. Every campaign gets a weekly report, and if a number looks good you will be able to see where it came from.",
     },
   ],
 };

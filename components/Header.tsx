@@ -15,7 +15,8 @@ export default function Header() {
   }, []);
 
   const links = [
-    { label: "Services", href: "/#services" },
+    { label: "What I do", href: "/#services" },
+    { label: "Pilot", href: "/#pilot" },
     { label: "Results", href: "/#proof" },
     { label: "Articles", href: "/articles" },
     { label: "About", href: "/about" },
@@ -46,7 +47,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-5 lg:gap-8">
           {links.map((l) => (
             <Link
               key={l.href}

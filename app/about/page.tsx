@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Angelo Miguel | Angelo Books",
   description:
-    "Angelo Books is a specialist outbound sales agency run by Angelo Miguel. We book qualified meetings for marketing agencies selling to local trades and service businesses in the US and Australia.",
+    "Angelo Books is a founder-led cold-calling operation run by Angelo Miguel, working with growing AI companies and select B2B businesses with a proven offer in the US and Australia.",
 };
 
 export default function About() {
@@ -53,8 +53,8 @@ export default function About() {
                   About
                 </p>
                 <h1 className="font-display text-4xl md:text-5xl font-bold text-white leading-[1.08] tracking-[-0.02em]">
-                  A small team. <br />
-                  Real accountability.
+                  One service. <br />
+                  Someone accountable for it.
                 </h1>
               </div>
             </div>
@@ -67,33 +67,39 @@ export default function About() {
         <div className="max-w-3xl mx-auto px-5">
           <div className="prose prose-lg max-w-none" style={{ color: "var(--text-mid)" }}>
             <p className="text-xl font-semibold leading-relaxed" style={{ color: "var(--navy)" }}>
-              Angelo Books was built on a simple observation: most marketing
-              agencies are excellent at what they do, and terrible at finding
-              people to do it for.
+              Angelo Books does one thing: cold calling, run for growing AI
+              companies and a small number of B2B businesses with an offer that
+              already sells.
             </p>
             <p className="mt-6 leading-relaxed">
-              The best web designers, SEO specialists, and paid media buyers
-              spend their afternoons on cold calls instead of client work. They
-              hire junior reps who do not understand the offer. They buy lists
-              and blast them with generic emails. The pipeline stays thin.
+              Plenty of companies build something good and then find out that
+              nobody hears about it. The founders are busy shipping. Hiring a
+              rep means recruiting, training and paying for a role before it
+              produces anything. So the phone never gets picked up, and the
+              company never really finds out whether calling would have worked
+              for them.
             </p>
             <p className="mt-5 leading-relaxed">
-              Angelo Miguel started Angelo Books to fix that. Angelo works
-              directly with marketing agencies selling to local service
-              businesses in the US and Australia, handling everything from
-              building the prospect list to booking the meeting and writing the
-              prep brief. It is the only category the agency takes on.
+              That is the gap Angelo Miguel started Angelo Books to fill. Every
+              engagement starts with a two-week pilot, because the honest first
+              question is not how many meetings you want, it is whether cold
+              calling suits what you sell and who you sell it to. Sometimes the
+              answer is meetings in the first week. Sometimes it is that the
+              targeting is off, or the offer needs a different opener. Both are
+              worth knowing early.
             </p>
             <p className="mt-5 leading-relaxed">
-              There is no account manager in the way. No hand-off to a junior
-              team after you sign. Angelo runs the campaigns himself, which
-              means he is personally invested in whether they perform.
+              The business is founder-led and stays that way. Angelo is on the
+              phone and in the messaging, and as the business grows he will
+              bring on a small team held to the standard he set. Either way you
+              will know who is calling on your behalf and what they are saying.
             </p>
             <p className="mt-5 leading-relaxed">
-              If you work with Angelo Books, you will know exactly what is
-              happening on your campaign every week. You will walk into every
-              sales conversation prepared. And you will spend your time closing,
-              not dialing.
+              What you will not get is a guaranteed number of meetings, a
+              commission-only arrangement, or a spreadsheet of everyone who was
+              ever dialed. The service is cold calling. You get the
+              conversations worth having, the weekly numbers, and a straight
+              read on what the market said back.
             </p>
           </div>
 
@@ -109,9 +115,9 @@ export default function About() {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {[
-                { label: "Agency type", value: brand.type },
+                { label: "What it is", value: brand.type },
                 { label: "Markets served", value: brand.serving.join(", ") },
-                { label: "Clients", value: brand.icpDescription },
+                { label: "Who it is for", value: brand.icpDescription },
               ].map((d) => (
                 <div key={d.label}>
                   <p
@@ -139,11 +145,11 @@ export default function About() {
               Book a Call with Angelo
             </a>
             <Link
-              href="/#services"
+              href="/services/cold-calling"
               className="px-7 py-4 rounded font-semibold text-center border transition-all duration-300 hover:-translate-y-0.5"
               style={{ color: "var(--navy)", borderColor: "var(--navy)" }}
             >
-              See all services
+              See how a campaign runs
             </Link>
           </div>
 
