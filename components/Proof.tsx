@@ -28,8 +28,8 @@ export default function Proof() {
             Receipts
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-white leading-[1.08] max-w-2xl">
-            Not a case study. <br className="hidden sm:block" />
-            The actual messages.
+            Real campaigns. <br className="hidden sm:block" />
+            Real numbers.
           </h2>
           <p
             className="mt-5 text-lg leading-relaxed max-w-xl"
@@ -37,6 +37,16 @@ export default function Proof() {
           >
             These are real client threads, posted publicly by Angelo as the
             campaigns ran. Client names are covered. Nothing else is. Tap any one to read it full size.
+          </p>
+          <p
+            className="mt-5 text-sm leading-relaxed max-w-xl rounded-xl px-5 py-4 border"
+            style={{
+              color: "#a8c0d8",
+              borderColor: "rgba(255,255,255,0.14)",
+              background: "rgba(255,255,255,0.04)",
+            }}
+          >
+            {brand.proofNote}
           </p>
         </Reveal>
 

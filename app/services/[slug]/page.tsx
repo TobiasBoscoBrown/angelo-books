@@ -298,7 +298,7 @@ export default async function ServicePage({
                 >
                   Book a call with {brand.owner} and talk through what you sell,
                   who you want to reach, and whether a pilot is worth running.
-                  You will be talking to the person who runs your campaign.
+                  You will be talking to the person who leads your campaign.
                 </p>
                 <a
                   href={brand.calendlyUrl}

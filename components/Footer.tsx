@@ -24,7 +24,8 @@ export default function Footer() {
           </p>
           <ul className="space-y-2 text-sm">
             {[
-              { label: "Services", href: "/#services" },
+              { label: "What I do", href: "/#services" },
+              { label: "Pilot", href: "/#pilot" },
               { label: "Results", href: "/#proof" },
               { label: "Articles", href: "/articles" },
               { label: "About Angelo", href: "/about" },

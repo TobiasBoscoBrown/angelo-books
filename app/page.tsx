@@ -7,7 +7,7 @@ import Proof from "@/components/Proof";
 import ClientWall from "@/components/ClientWall";
 import Reveal from "@/components/Reveal";
 
-const snapshot = brand.results.slice(0, 3);
+const snapshot = brand.results.slice(0, 2);
 const service = brand.services[0];
 const { pilot, ongoing, fit } = brand;
 
@@ -69,8 +69,8 @@ export default function Home() {
                 style={{ color: "#a8c0d8" }}
               >
                 Managed cold-calling campaigns for growing AI companies and
-                select B2B businesses with a proven offer. I build the list,
-                make the calls, and hand over the conversations worth having.
+                select B2B businesses with a proven offer. I work the list, make
+                the calls, and hand over the qualified conversations.
               </p>
             </div>
 
@@ -107,7 +107,7 @@ export default function Home() {
                   color: "#8fa8c0",
                 }}
               >
-                <span>Cold calling only</span>
+                <span>Cold calling at the core</span>
                 <span>US + Australia</span>
                 <span>No long-term contract</span>
               </div>
@@ -191,7 +191,7 @@ export default function Home() {
                     {brand.owner}
                   </p>
                   <p className="text-xs mt-0.5" style={{ color: "#7d97b3" }}>
-                    {brand.founderRole}, on the phone himself
+                    {brand.founderRole}, leads every campaign
                   </p>
                 </div>
                 <div className="flex items-center gap-2 flex-shrink-0">
@@ -241,7 +241,7 @@ export default function Home() {
                 className="font-display text-4xl md:text-5xl font-bold tracking-[-0.02em]"
                 style={{ color: "var(--navy)" }}
               >
-                One service. Cold calling.
+                Cold calling is at the core.
               </h2>
               <p
                 className="mt-5 text-lg leading-relaxed"
@@ -324,17 +324,29 @@ export default function Home() {
                   className="text-sm leading-relaxed mb-7"
                   style={{ color: "var(--text-mid)" }}
                 >
-                  These are part of the campaign, not separate things to buy.
+                  Included campaign support, expanded coverage, or an add-on.
+                  Never a separate service.
                 </p>
                 <ul className="space-y-6">
                   {brand.supporting.map((s) => (
                     <li key={s.name}>
-                      <p
-                        className="font-semibold text-base mb-1"
-                        style={{ color: "var(--navy)" }}
-                      >
-                        {s.name}
-                      </p>
+                      <div className="flex flex-wrap items-baseline gap-x-3 mb-1">
+                        <p
+                          className="font-semibold text-base"
+                          style={{ color: "var(--navy)" }}
+                        >
+                          {s.name}
+                        </p>
+                        <span
+                          className="text-[10px] font-semibold uppercase tracking-[0.12em] px-2 py-0.5 rounded-full"
+                          style={{
+                            background: "var(--off-white)",
+                            color: "var(--text-soft)",
+                          }}
+                        >
+                          {s.kind}
+                        </span>
+                      </div>
                       <p
                         className="text-sm leading-relaxed"
                         style={{ color: "var(--text-mid)" }}
@@ -404,8 +416,23 @@ export default function Home() {
                   className="mt-3 text-base leading-relaxed"
                   style={{ color: "#a8c0d8" }}
                 >
-                  {pilot.honest}
+                  {pilot.runsOn}
                 </p>
+
+                <div
+                  className="mt-8 pt-7 border-t"
+                  style={{ borderColor: "rgba(255,255,255,0.15)" }}
+                >
+                  <p
+                    className="text-[11px] font-semibold uppercase tracking-[0.16em] mb-2"
+                    style={{ color: "var(--gold)" }}
+                  >
+                    {pilot.criteria.title}
+                  </p>
+                  <p className="text-sm leading-relaxed" style={{ color: "#a8c0d8" }}>
+                    {pilot.criteria.body}
+                  </p>
+                </div>
 
                 <div
                   className="mt-8 pt-7 border-t"
@@ -422,11 +449,18 @@ export default function Home() {
                   </p>
                 </div>
 
+                <p
+                  className="mt-8 text-sm leading-relaxed"
+                  style={{ color: "#a8c0d8" }}
+                >
+                  {pilot.honest}
+                </p>
+
                 <a
                   href={brand.calendlyUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-9 block w-full py-4 rounded font-semibold text-center transition-transform duration-300 hover:-translate-y-0.5"
+                  className="mt-7 block w-full py-4 rounded font-semibold text-center transition-transform duration-300 hover:-translate-y-0.5"
                   style={{ background: "var(--gold)", color: "var(--navy-dark)" }}
                 >
                   Talk through a pilot
@@ -618,8 +652,8 @@ export default function Home() {
               className="font-display text-4xl md:text-5xl font-bold mb-6 leading-[1.08] tracking-[-0.02em]"
               style={{ color: "var(--navy)" }}
             >
-              Cold calling is all <br />
-              I do.
+              Cold calling is <br />
+              at the core.
             </h2>
             <p
               className="text-base leading-relaxed mb-5"
@@ -627,17 +661,18 @@ export default function Home() {
             >
               Angelo Books runs cold-calling campaigns for growing AI companies
               and a small number of B2B businesses with an offer that already
-              sells. One service, so the calling gets the attention it needs.
+              sells. The main service is managed cold calling. Everything else,
+              from the messaging to the follow-up to list building, is campaign
+              support around it rather than a second service.
             </p>
             <p
               className="text-base leading-relaxed mb-9"
               style={{ color: "var(--text-mid)" }}
             >
-              The business is founder-led. I stay directly involved in the
-              campaign, the messaging and the quality control, and as it grows I
-              will bring on a small team held to the same standard. You will
-              always know who is calling on your behalf and what they are
-              saying.
+              The business is founder-led. I lead every campaign, along with the
+              messaging and the quality control, and as it grows I will bring on
+              a small team held to the same standard. You will always know who
+              is calling on your behalf and what they are saying.
             </p>
             <Link
               href="/about"

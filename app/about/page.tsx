@@ -53,7 +53,7 @@ export default function About() {
                   About
                 </p>
                 <h1 className="font-display text-4xl md:text-5xl font-bold text-white leading-[1.08] tracking-[-0.02em]">
-                  One service. <br />
+                  One core service. <br />
                   Someone accountable for it.
                 </h1>
               </div>
@@ -67,7 +67,7 @@ export default function About() {
         <div className="max-w-3xl mx-auto px-5">
           <div className="prose prose-lg max-w-none" style={{ color: "var(--text-mid)" }}>
             <p className="text-xl font-semibold leading-relaxed" style={{ color: "var(--navy)" }}>
-              Angelo Books does one thing: cold calling, run for growing AI
+              Cold calling is at the core of Angelo Books, run for growing AI
               companies and a small number of B2B businesses with an offer that
               already sells.
             </p>
@@ -83,23 +83,30 @@ export default function About() {
               That is the gap Angelo Miguel started Angelo Books to fill. Every
               engagement starts with a two-week pilot, because the honest first
               question is not how many meetings you want, it is whether cold
-              calling suits what you sell and who you sell it to. Sometimes the
-              answer is meetings in the first week. Sometimes it is that the
-              targeting is off, or the offer needs a different opener. Both are
-              worth knowing early.
+              calling suits what you sell and who you sell it to. Before the
+              first dial we agree on one clear measure of success, usually a
+              booked meeting or agreement to receive a demo. It gets measured
+              and reported. It does not get guaranteed.
             </p>
             <p className="mt-5 leading-relaxed">
-              The business is founder-led and stays that way. Angelo is on the
-              phone and in the messaging, and as the business grows he will
-              bring on a small team held to the standard he set. Either way you
-              will know who is calling on your behalf and what they are saying.
+              The main service is managed cold calling. The messaging, the
+              follow-up, the conversation handover and the weekly reporting come
+              with a campaign; list building is an add-on; more dials or another
+              segment is expanded coverage. None of it is sold as a service of
+              its own, because the calling is the point.
+            </p>
+            <p className="mt-5 leading-relaxed">
+              The business is founder-led and stays that way. Angelo leads every
+              campaign, and as it grows he will bring on a small team held to
+              the standard he set. You will know who is calling on your behalf
+              and what they are saying.
             </p>
             <p className="mt-5 leading-relaxed">
               What you will not get is a guaranteed number of meetings, a
               commission-only arrangement, or a spreadsheet of everyone who was
-              ever dialed. The service is cold calling. You get the
-              conversations worth having, the weekly numbers, and a straight
-              read on what the market said back.
+              ever dialed. You get the qualified conversations, the right person
+              with the right context, whether they are ready now or worth
+              nurturing later. Unqualified leads are not delivered.
             </p>
           </div>
 
