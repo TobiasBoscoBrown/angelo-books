@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Angelo Miguel | Angelo Books",
   description:
-    "Angelo Books is a founder-led cold-calling operation run by Angelo Miguel, working with growing AI companies and select B2B businesses with a proven offer in the US and Australia.",
+    "Angelo Books is a founder-led cold-calling operation run by Angelo Miguel, running global B2B cold-calling campaigns for companies with a proven offer.",
 };
 
 export default function About() {
@@ -67,46 +67,36 @@ export default function About() {
         <div className="max-w-3xl mx-auto px-5">
           <div className="prose prose-lg max-w-none" style={{ color: "var(--text-mid)" }}>
             <p className="text-xl font-semibold leading-relaxed" style={{ color: "var(--navy)" }}>
-              Cold calling is at the core of Angelo Books, run for growing AI
-              companies and a small number of B2B businesses with an offer that
-              already sells.
+              Angelo Books runs cold calling for B2B companies with a proven
+              offer, in any market with enough reachable prospects to support
+              outbound.
             </p>
             <p className="mt-6 leading-relaxed">
               Plenty of companies build something good and then find out that
               nobody hears about it. The founders are busy shipping. Hiring a
               rep means recruiting, training and paying for a role before it
               produces anything. So the phone never gets picked up, and the
-              company never really finds out whether calling would have worked
-              for them.
+              company never finds out whether calling would have worked for
+              them.
             </p>
             <p className="mt-5 leading-relaxed">
-              That is the gap Angelo Miguel started Angelo Books to fill. Every
-              engagement starts with a two-week pilot, because the honest first
-              question is not how many meetings you want, it is whether cold
-              calling suits what you sell and who you sell it to. Before the
-              first dial we agree on one clear measure of success, usually a
-              booked meeting or agreement to receive a demo. It gets measured
-              and reported. It does not get guaranteed.
+              That&apos;s the gap Angelo Miguel started Angelo Books to fill.
+              Every engagement starts with a two-week pilot that guarantees at
+              least 10 qualified conversations: live conversations with the
+              right person, who understands why he&apos;s calling. Meetings get
+              booked where there&apos;s a genuine reason for one. The rest tells
+              you what the market is saying.
             </p>
             <p className="mt-5 leading-relaxed">
-              The main service is managed cold calling. The messaging, the
-              follow-up, the conversation handover and the weekly reporting come
-              with a campaign; list building is an add-on; more dials or another
-              segment is expanded coverage. None of it is sold as a service of
-              its own, because the calling is the point.
+              Angelo uses his own dialer and campaign-tracking setup, so
+              there&apos;s nothing for you to set up. Bring a call-ready list, or
+              he&apos;ll build one.
             </p>
             <p className="mt-5 leading-relaxed">
-              The business is founder-led and stays that way. Angelo leads every
-              campaign, and as it grows he will bring on a small team held to
-              the standard he set. You will know who is calling on your behalf
-              and what they are saying.
-            </p>
-            <p className="mt-5 leading-relaxed">
-              What you will not get is a guaranteed number of meetings, a
-              commission-only arrangement, or a spreadsheet of everyone who was
-              ever dialed. You get the qualified conversations, the right person
-              with the right context, whether they are ready now or worth
-              nurturing later. Unqualified leads are not delivered.
+              If a campaign needs more calling capacity or faster market
+              coverage, Angelo brings in an additional pair of callers and
+              manages them directly. He stays hands-on and accountable for the
+              quality of the work.
             </p>
           </div>
 
@@ -174,15 +164,17 @@ export default function About() {
             >
               Threads
             </a>
-            <a
-              href={brand.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-medium underline underline-offset-4 transition-colors"
-              style={{ color: "var(--navy)" }}
-            >
-              LinkedIn
-            </a>
+            {brand.linkedin && (
+              <a
+                href={brand.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium underline underline-offset-4 transition-colors"
+                style={{ color: "var(--navy)" }}
+              >
+                LinkedIn
+              </a>
+            )}
           </div>
         </div>
       </section>

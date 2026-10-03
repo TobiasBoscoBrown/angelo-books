@@ -1,183 +1,151 @@
 export const brand = {
   name: "Angelo Books",
   owner: "Angelo Miguel",
-  tagline:
-    "Managed cold-calling campaigns for growing AI companies and select B2B businesses with a proven offer.",
+  tagline: "Cold calling, run for you. Global B2B campaigns.",
   subTagline:
-    "Cold calling is at the core. I work the list, make the calls, and hand over the qualified conversations.",
-  phone: "",
+    "Bring a call-ready list, or I'll build one. I handle the calling setup, make the calls, follow up by email where it makes sense, and book meetings when there's a real reason to continue the conversation.",
+  phone: "+1 (209) 309-4812",
+  phoneHref: "tel:+12093094812",
   email: "",
-  calendlyUrl: "https://bit.ly/angelobooks",
-  serving: ["United States", "Australia"],
+  // Primary CTA everywhere on the site.
+  calendlyUrl: "https://calendar.app.google/8Q2NfBX5BLbPxdZ38",
+  serving: ["Global B2B campaigns"],
   icpDescription:
-    "Growing AI companies and select B2B businesses with a proven offer",
+    "B2B companies with a proven offer and deals worth a real sales conversation",
   founded: "2024",
-  type: "Managed cold-calling campaigns",
+  type: "Managed cold calling",
   threads: "https://www.threads.com/@justangeloing",
-  linkedin: "https://www.linkedin.com/in/angelo-miguel-999b612a4/",
+  // Angelo Books LinkedIn company page. Leave empty until the URL is
+  // confirmed: every LinkedIn link on the site hides itself while this is "".
+  linkedin: "",
   founderRole: "Founder",
-  // How Angelo describes the business now that the focus is AI companies.
   founderQuote:
-    "I run cold-calling campaigns for AI companies and B2B businesses that already have something people buy.",
+    "I run cold-calling campaigns for B2B companies that already have something people buy.",
   accentColor: "#1a3a5c",
 
-  // Cold calling is the core service. Everything else on this site is
-  // positioned as included campaign support, expanded coverage, or an add-on.
+  hero: {
+    eyebrow: "Global B2B campaigns",
+    lead:
+      "Bring a call-ready list, or I'll build one. I handle the calling setup, make the calls, follow up by email where it makes sense, and book meetings when there's a real reason to continue the conversation.",
+    offer:
+      "Pilot engagements start at $1,500* and include a minimum of 10 qualified conversations.",
+    guarantee: "If we don't reach 10, I keep calling until we do.",
+  },
+
+  qualified: {
+    is: "A live conversation with the right person, in the right context, where they understand why I'm calling and show enough interest to engage meaningfully, whether that becomes a meeting, a request for more information, a real follow-up opportunity, or a reasonable rejection.",
+    isNot: [
+      "A receptionist pickup",
+      "Voicemail",
+      "The wrong person",
+      "A brush-off before they understand the reason for the call",
+    ],
+  },
+
+  howItWorks: [
+    {
+      title: "List",
+      body: "Bring a call-ready list, or I'll build one. Sourcing is quoted separately.",
+    },
+    {
+      title: "Calls",
+      body: "I use my own dialer and campaign-tracking setup.",
+    },
+    {
+      title: "Conversations",
+      body: "The pilot guarantees at least 10 qualified conversations.",
+    },
+    {
+      title: "Next step",
+      body: "Meetings are booked where they make sense. The rest tells us what the market is saying.",
+    },
+  ],
+  emailNote:
+    "Email follow-up is used where it supports a real conversation, callback, referral or next step. This is not a bulk cold-email service.",
+
+  // Single core service, used by /services/cold-calling.
   services: [
     {
       slug: "cold-calling",
       name: "Cold Calling",
-      tagline: "The core of every campaign.",
+      tagline: "Run for you, start to finish.",
       description:
-        "Managed cold-calling campaigns. I learn your offer, work a targeted list, make the calls, and hand over the qualified conversations: the right person with the right context.",
+        "Bring a call-ready list, or I'll build one. I handle the calling setup, make the calls, follow up by email where it makes sense, and book meetings when there's a real reason to continue the conversation.",
       detail:
-        "Cold calling is the core service. List building, follow-up, messaging and reporting sit around it as included campaign support, expanded coverage or an add-on, so the calling always stays the point.",
+        "The pilot guarantees at least 10 qualified conversations. Meetings are booked where there's a genuine reason for one, and the rest tells us what the market is saying.",
       bestFor:
-        "AI companies and established B2B businesses with a proven offer, a few paying customers, and someone who can run the demo and close.",
+        "B2B companies with a proven offer, deals worth a real sales conversation, and a sales process that can convert qualified meetings.",
       steps: [
         {
-          title: "We get your offer straight",
-          body:
-            "Before anyone dials, I need to know what you sell, who buys it, and why the last few customers said yes. That conversation is the foundation of the campaign.",
+          title: "List",
+          body: "Bring a call-ready list, or I'll build one. Sourcing is quoted separately.",
         },
         {
-          title: "We agree on what success looks like",
-          body:
-            "One clear criteria, set before calling starts. Usually a booked meeting, or agreement to receive a demo. It gets measured and reported. It does not get guaranteed.",
+          title: "Calls",
+          body: "I use my own dialer and campaign-tracking setup.",
         },
         {
-          title: "We sort out the list",
-          body:
-            "You bring the list and I work it, or I build one from your ideal customer profile as an add-on. Either way we agree on who is being called before the calling starts.",
+          title: "Conversations",
+          body: "The pilot guarantees at least 10 qualified conversations.",
         },
         {
-          title: "I make the calls",
-          body:
-            "Real calls on every campaign day, run from your CRM and dialer, with objections handled live and notes written down while the conversation is still fresh.",
-        },
-        {
-          title: "You get the qualified conversations",
-          body:
-            "The right person with the right context, whether they are ready now or worth nurturing later. They come to you with the context attached. Unqualified leads do not get handed over.",
-        },
-        {
-          title: "We adjust from what the phone says",
-          body:
-            "Calls tell you things a dashboard cannot: which segment engages, which line lands, where the offer gets pushback. We change the targeting and the messaging from that.",
+          title: "Next step",
+          body: "Meetings are booked where they make sense. The rest tells us what the market is saying.",
         },
       ],
       deliverables: [
-        "Calls made on your behalf on every campaign day, from your CRM and dialer",
-        "One agreed success criteria, measured and reported through the campaign",
-        "Qualified conversations handed over with context: who they are, what they said, and why it matters",
-        "A script and messaging built around your offer, adjusted as the calls come back",
-        "Follow-up on the conversations worth staying in touch with",
-        "Weekly reporting on dials, conversations and outcomes",
-        "Honest feedback on what the market is telling us about your offer and targeting",
+        "One offer, one primary ICP and one defined market",
+        "A minimum of 10 qualified conversations",
+        "Meetings booked where there's a genuine reason for one",
+        "Call recordings and/or transcripts of qualified conversations, where legally permitted",
+        "Email follow-up where it supports a real conversation, callback, referral or next step",
       ],
-    },
-  ],
-
-  // Support around the core service. Each carries how it is provided, so
-  // nothing here reads as a second thing to buy.
-  supporting: [
-    {
-      name: "Messaging and script",
-      kind: "Included",
-      body:
-        "The opener, the qualifying questions and the objection handling, written for your offer and rewritten as the calls come back.",
-    },
-    {
-      name: "Qualified conversation handover",
-      kind: "Included",
-      body:
-        "Every conversation handed to you comes with who the person is, what they said, and the angle I would open with. Unqualified leads are not delivered.",
-    },
-    {
-      name: "Follow-up",
-      kind: "Included",
-      body:
-        "The people worth staying in touch with get followed up rather than dropped after one call.",
-    },
-    {
-      name: "Weekly reporting",
-      kind: "Included",
-      body:
-        "Dials, conversations, outcomes and how the agreed success criteria is tracking. Sent to you, not buried in a dashboard.",
-    },
-    {
-      name: "List building",
-      kind: "Add-on",
-      body:
-        "A targeted list built from your ideal customer profile if you would rather not build one yourself. $200 on the pilot.",
-    },
-    {
-      name: "More coverage",
-      kind: "Expanded coverage",
-      body:
-        "More dials a week, or a second segment or market brought into the campaign, once we know what is working.",
     },
   ],
 
   pilot: {
-    price: "$500",
-    priceNote: "upfront",
-    dials: "500 dials",
+    price: "$1,500",
+    priceLead: "Starting at",
     window: "2 weeks",
-    summary:
-      "A two-week pilot to find out whether cold calling works for your offer.",
-    body:
-      "It is a test, not a meeting quota. Some pilots book meetings in the first week. Some tell you the targeting is wrong, or that the offer needs a different opener, and that is worth knowing before you spend months on it.",
-    runsOn:
-      "Calls run from your CRM and your dialer, so the activity and the records stay in your system.",
-    criteria: {
-      title: "One agreed success criteria",
-      body:
-        "Before calling starts we agree on a single clear measure. Usually a booked meeting, or agreement to receive a demo. It is measured and reported through the pilot. It is not guaranteed.",
-    },
-    outcomes: [
-      "Meetings booked",
-      "Demo interest worth following up",
-      "Nurture opportunities for later",
-      "Actionable feedback on your market, offer and targeting",
-      "A read on where you are losing people: no-shows, or the sales process itself",
+    scope: [
+      "One offer, one primary ICP and one defined market",
+      "Minimum 10 qualified conversations",
+      "Meetings are booked where there is a genuine reason for one",
+      "Call recordings and/or transcripts of qualified conversations are provided where legally permitted",
     ],
-    addon: {
-      name: "List building",
-      price: "$200",
-      body:
-        "Optional. Bring your own list and I will work it. If you would rather not build one, I will, for $200 on top of the pilot.",
-    },
-    honest:
-      "I will not promise you a number of meetings. Anyone who does, before a single call has been made for your offer, is guessing.",
+    guarantee:
+      "If we do not reach 10 qualified conversations within the two weeks for reasons within my control, I keep calling at no additional cost until we do.",
+    footnote:
+      "*The $1,500 pilot assumes the client provides a call-ready list. List sourcing and enrichment are scoped separately based on the market and difficulty of finding the right contacts.",
   },
 
   ongoing: {
     title: "After the pilot",
-    body:
-      "If the pilot says cold calling works for you, we keep going. On an ongoing campaign I hand over the qualified conversations: the right person with the right context, whether they are ready now or worth nurturing later.",
-    endorsed: [
-      "Right person, right context, ready to talk now",
-      "Right person, right context, worth nurturing for later",
+    body: "The pilot gives both sides something real to judge. We use its actual numbers to decide what a monthly engagement should look like, instead of making up a meeting target before the market has been called.",
+  },
+
+  capacity: {
+    title: "Flexible caller capacity",
+    body: [
+      "Need the whole calling motion run for you? I can handle it. Already have the list, offer and sales process and just need an experienced caller? I can plug into that too.",
+      "If the campaign needs more calling capacity or faster market coverage, I can bring in an additional pair of callers and manage them directly. I stay hands-on and accountable for the quality of the work.",
     ],
-    note:
-      "Unqualified leads are not delivered. Where I build the list on an ongoing engagement, you receive the qualified conversations from it rather than every name that was called. The service is cold calling, not database delivery.",
   },
 
   fit: {
     yes: [
-      "You are an AI company or an established B2B business",
-      "You already have a few paying customers",
-      "You know who you want to target",
-      "You have someone who can handle demos and close",
-      "You want to test or scale cold calling",
+      "B2B companies with a proven offer or clear evidence that customers already buy.",
+      "Deals valuable enough that a real sales conversation matters, ideally $10k+ ACV/LTV.",
+      "A clear, identifiable market with enough reachable prospects to support outbound.",
+      "A sales process that can convert qualified meetings, ideally 20%+ close rate.",
+      "A team that wants experienced calling and honest market feedback, not a guaranteed calendar.",
     ],
     no: [
-      "You are still trying to get your first customer",
-      "You are unsure who your ideal customer is",
-      "You need me to handle the entire sale",
-      "You only want to pay when a deal closes",
-      "You expect guaranteed meetings or customers",
+      "The offer is still unproven and cold calling is being used to figure out whether anyone wants it.",
+      "The market is so small that sustained outbound would burn through it quickly.",
+      "The economics only work if the campaign produces a high volume of cheap meetings.",
+      "The client wants meetings guaranteed regardless of list quality, offer, timing or market response.",
+      "The client wants me dependent on a complicated internal dialer/CRM setup to do the job.",
     ],
   },
 
@@ -229,6 +197,14 @@ export const brand = {
       kicker: "A campaign, end to end",
       note: "85 dials and 7 appointments set. The client replied: Great work!",
       alt: "Client message thread showing a campaign summary of 2 meeting preps, 85 dials and 7 appointments set, with the client replying, Great work!",
+    },
+    {
+      src: "/proof/proof-4.jpg",
+      width: 1280,
+      height: 662,
+      kicker: "Pilot client feedback",
+      note: "A pilot client on how the calling was handled.",
+      alt: "Client message reading: Truthfully, I couldn't have picked a better person for this pilot. You've been thoughtful, (part of the message is blurred) not just a list of calls to get through. I really appreciate that.",
     },
   ],
 
@@ -297,44 +273,44 @@ export const brand = {
 
   faqs: [
     {
-      q: "What do I get for the $500 pilot?",
-      a: "500 dials over two weeks, made for your offer, run from your CRM and dialer. Before calling starts we agree on one clear success criteria, usually a booked meeting or agreement to receive a demo, and I report against it every week. You also get the script, the call notes, and a straight read on your market and targeting.",
+      q: "What does the pilot include?",
+      a: "Two weeks of calling for one offer, one primary ICP and one defined market, with a minimum of 10 qualified conversations. Meetings get booked where there's a genuine reason for one, and you get call recordings and/or transcripts of the qualified conversations where legally permitted. Pilots start at $1,500, which assumes you provide a call-ready list.",
     },
     {
-      q: "Will the pilot get me meetings?",
-      a: "It might, and campaigns have booked meetings in the first week before. The agreed success criteria is measured, not guaranteed. I am not going to promise you a number before a single call has been made for your offer. What the pilot guarantees is 500 real dials and an honest account of what came back.",
+      q: "What if you don't reach 10 qualified conversations?",
+      a: "If we don't reach 10 within the two weeks for reasons within my control, I keep calling at no additional cost until we do.",
     },
     {
-      q: "Whose CRM and dialer do we use?",
-      a: "Yours. Calls run through your systems, so the activity, the recordings and the records sit where your team already works and stay yours when the pilot ends.",
+      q: "Do you guarantee meetings?",
+      a: "No. The guarantee is qualified conversations. Meetings are booked when there's a real reason to continue the conversation, so you don't end up with a calendar full of weak ones.",
     },
     {
-      q: "Do you build the list, or do I bring one?",
-      a: "Bring one and I will work it. If you would rather not build one, list building is an optional $200 add-on to the pilot. On an ongoing engagement where I build the list, you receive the qualified conversations from it rather than every name that was called.",
+      q: "Do I need to bring a list?",
+      a: "Bring a call-ready list, or I'll build one. List sourcing and enrichment are quoted separately, based on the market and how hard the right contacts are to find.",
     },
     {
-      q: "What do you actually hand over?",
-      a: "Qualified conversations, not every conversation and not a spreadsheet of everyone dialed. That means the right person with the right context, whether they are ready to talk now or worth nurturing for later, handed to you with what they said and the angle I would open with. Unqualified leads are not delivered.",
+      q: "Whose dialer and CRM do you use?",
+      a: "Mine. I use my own dialer and campaign-tracking setup, so you don't need to set anything up for me.",
+    },
+    {
+      q: "Is this a cold email service?",
+      a: "No. Email follow-up is used where it supports a real conversation, callback, referral or next step. The calling is the service.",
+    },
+    {
+      q: "Who makes the calls?",
+      a: "I do. If a campaign needs more calling capacity or faster market coverage, I can bring in an additional pair of callers and manage them directly. I stay hands-on and accountable for the quality of the work.",
+    },
+    {
+      q: "Where do you run campaigns?",
+      a: "Global B2B campaigns. What matters is a clear market with enough reachable prospects to support outbound.",
     },
     {
       q: "What happens after the pilot?",
-      a: "If the calling works for you, we run an ongoing campaign: same core service, with the coverage adjusted to what we learned. More dials a week, or a second segment, if that is what the numbers point at.",
-    },
-    {
-      q: "Is cold calling all you do?",
-      a: "Cold calling is the core service and everything else supports it. The messaging, the follow-up, the conversation handover and the weekly reporting are included in a campaign. List building is an add-on. None of it is sold as a separate service, because the calling is the point.",
-    },
-    {
-      q: "Who actually makes the calls?",
-      a: "Me. Angelo Books is founder-led: I lead every campaign, the messaging and the quality control. As the business grows I will bring on a small team, and the standard for what gets said on your behalf stays mine.",
-    },
-    {
-      q: "Do you work on commission, or per meeting booked?",
-      a: "No. You pay for the calling, not for outcomes I do not control. Whether a booked meeting turns into a customer depends on your demo, your pricing and your follow-up. If you only want to pay when a deal closes, we are not a fit.",
+      a: "We use the pilot's actual numbers to decide what a monthly engagement should look like.",
     },
     {
       q: "Why should I trust your numbers?",
-      a: "Because you can read them yourself. The dial counts and appointment counts on this site are screenshots of the actual client threads, posted publicly as the campaigns ran. Those campaigns included meeting preparation in scope, which the current offer does not, so read the dials and the appointments. Every campaign gets a weekly report, and if a number looks good you will be able to see where it came from.",
+      a: "Because you can read them yourself. The dial counts and appointment counts on this site are screenshots of the actual client threads, posted publicly as the campaigns ran. Those campaigns included meeting preparation in scope, which the current offer does not, so read the dials and the appointments.",
     },
   ],
 };

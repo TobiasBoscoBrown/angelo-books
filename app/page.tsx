@@ -8,8 +8,7 @@ import ClientWall from "@/components/ClientWall";
 import Reveal from "@/components/Reveal";
 
 const snapshot = brand.results.slice(0, 2);
-const service = brand.services[0];
-const { pilot, ongoing, fit } = brand;
+const { hero, qualified, pilot, ongoing, fit, capacity } = brand;
 
 export default function Home() {
   return (
@@ -42,7 +41,7 @@ export default function Home() {
                 className="text-xs font-semibold uppercase tracking-[0.2em] mb-5"
                 style={{ color: "var(--gold)" }}
               >
-                Cold calling for AI companies and B2B
+                {hero.eyebrow}
               </p>
             </div>
 
@@ -65,17 +64,19 @@ export default function Home() {
 
             <div className="rise" style={{ animationDelay: "150ms" }}>
               <p
-                className="text-lg md:text-xl leading-relaxed mb-9 max-w-xl"
+                className="text-lg md:text-xl leading-relaxed mb-6 max-w-xl"
                 style={{ color: "#a8c0d8" }}
               >
-                Managed cold-calling campaigns for growing AI companies and
-                select B2B businesses with a proven offer. I work the list, make
-                the calls, and hand over the qualified conversations.
+                {hero.lead}
+              </p>
+              <p className="text-base md:text-lg leading-relaxed mb-9 max-w-xl text-white">
+                {hero.offer}{" "}
+                <span style={{ color: "var(--gold-light)" }}>{hero.guarantee}</span>
               </p>
             </div>
 
             <div className="rise" style={{ animationDelay: "210ms" }}>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
                 <a
                   href={brand.calendlyUrl}
                   target="_blank"
@@ -89,27 +90,13 @@ export default function Home() {
                 >
                   Book a Call
                 </a>
-                <Link
-                  href="#pilot"
-                  className="px-7 py-4 font-semibold rounded text-center border text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/10"
-                  style={{ borderColor: "rgba(255,255,255,0.3)" }}
+                <a
+                  href={brand.phoneHref}
+                  className="text-center text-sm font-medium transition-colors hover:text-white"
+                  style={{ color: "#c8d8e8" }}
                 >
-                  See the {pilot.price} pilot
-                </Link>
-              </div>
-            </div>
-
-            <div className="rise" style={{ animationDelay: "280ms" }}>
-              <div
-                className="mt-10 pt-8 border-t flex flex-wrap gap-x-6 gap-y-2 text-sm"
-                style={{
-                  borderColor: "rgba(255,255,255,0.15)",
-                  color: "#8fa8c0",
-                }}
-              >
-                <span>Cold calling at the core</span>
-                <span>US + Australia</span>
-                <span>No long-term contract</span>
+                  or call {brand.phone}
+                </a>
               </div>
             </div>
           </div>
@@ -204,15 +191,17 @@ export default function Home() {
                   >
                     Threads
                   </a>
-                  <a
-                    href={brand.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-3 py-1.5 rounded text-[11px] font-semibold border text-white transition-all duration-300 hover:bg-white/10"
-                    style={{ borderColor: "rgba(255,255,255,0.22)" }}
-                  >
-                    LinkedIn
-                  </a>
+                  {brand.linkedin && (
+                    <a
+                      href={brand.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-3 py-1.5 rounded text-[11px] font-semibold border text-white transition-all duration-300 hover:bg-white/10"
+                      style={{ borderColor: "rgba(255,255,255,0.22)" }}
+                    >
+                      LinkedIn
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
@@ -222,148 +211,70 @@ export default function Home() {
 
       <ClientWall />
 
-      {/* THE SERVICE */}
+      {/* QUALIFIED CONVERSATION */}
       <section
-        id="services"
+        id="qualified"
         className="py-24 md:py-32"
         style={{ background: "var(--off-white)" }}
       >
-        <div className="max-w-6xl mx-auto px-5">
+        <div className="max-w-6xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-10 lg:gap-16 items-start">
           <Reveal>
-            <div className="mb-16 max-w-2xl">
-              <p
-                className="text-xs font-semibold uppercase tracking-[0.18em] mb-4"
-                style={{ color: "var(--gold)" }}
-              >
-                What I do
-              </p>
-              <h2
-                className="font-display text-4xl md:text-5xl font-bold tracking-[-0.02em]"
-                style={{ color: "var(--navy)" }}
-              >
-                Cold calling is at the core.
-              </h2>
-              <p
-                className="mt-5 text-lg leading-relaxed"
-                style={{ color: "var(--text-mid)" }}
-              >
-                {service.description}
-              </p>
-            </div>
+            <p
+              className="text-xs font-semibold uppercase tracking-[0.18em] mb-4"
+              style={{ color: "var(--gold)" }}
+            >
+              What I guarantee
+            </p>
+            <h2
+              className="font-display text-4xl md:text-5xl font-bold tracking-[-0.02em] mb-6"
+              style={{ color: "var(--navy)" }}
+            >
+              What counts as a qualified conversation.
+            </h2>
+            <p
+              className="text-lg leading-relaxed"
+              style={{ color: "var(--text-mid)" }}
+            >
+              {qualified.is}
+            </p>
           </Reveal>
 
-          <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_1fr] gap-6">
-            <Reveal distance={30}>
-              <Link
-                href={`/services/${service.slug}`}
-                className="group relative flex h-full flex-col justify-between p-8 md:p-10 rounded-2xl border overflow-hidden transition-all duration-400 hover:-translate-y-1.5"
-                style={{
-                  background: "white",
-                  borderColor: "var(--line)",
-                  boxShadow: "0 1px 2px rgba(15,37,64,0.04)",
-                }}
+          <Reveal delay={100} distance={30}>
+            <div
+              className="rounded-2xl p-8 md:p-9 border"
+              style={{ background: "white", borderColor: "var(--line)" }}
+            >
+              <p
+                className="font-display text-2xl font-semibold mb-6"
+                style={{ color: "var(--navy)" }}
               >
-                <span
-                  aria-hidden
-                  className="absolute top-0 left-0 h-[3px] w-0 transition-all duration-500 group-hover:w-full"
-                  style={{ background: "var(--gold)" }}
-                />
-                <div>
-                  <h3
-                    className="font-display text-3xl font-semibold mb-2"
-                    style={{ color: "var(--navy)" }}
+                It does not include
+              </p>
+              <ul className="space-y-4">
+                {qualified.isNot.map((item) => (
+                  <li
+                    key={item}
+                    className="flex gap-3 text-sm leading-relaxed"
+                    style={{ color: "var(--text-mid)" }}
                   >
-                    {service.name}
-                  </h3>
-                  <p
-                    className="font-display text-base italic mb-6"
-                    style={{ color: "var(--gold)" }}
-                  >
-                    {service.tagline}
-                  </p>
-                  <ul className="space-y-3">
-                    {service.deliverables.slice(0, 4).map((d) => (
-                      <li
-                        key={d}
-                        className="flex gap-3 text-sm leading-relaxed"
-                        style={{ color: "var(--text-mid)" }}
-                      >
-                        <span
-                          aria-hidden
-                          className="flex-shrink-0 mt-0.5 w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold text-white"
-                          style={{ background: "var(--navy)" }}
-                        >
-                          ✓
-                        </span>
-                        {d}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <span
-                  className="mt-8 text-xs font-semibold uppercase tracking-[0.14em] inline-flex items-center gap-1.5 transition-transform duration-300 group-hover:translate-x-1"
-                  style={{ color: "var(--navy)" }}
-                >
-                  How a campaign runs <span aria-hidden>→</span>
-                </span>
-              </Link>
-            </Reveal>
-
-            <Reveal delay={100} distance={30}>
-              <div
-                className="h-full p-8 md:p-9 rounded-2xl border"
-                style={{ background: "white", borderColor: "var(--line)" }}
-              >
-                <p
-                  className="text-xs font-semibold uppercase tracking-[0.16em] mb-2"
-                  style={{ color: "var(--text-soft)" }}
-                >
-                  What supports the calling
-                </p>
-                <p
-                  className="text-sm leading-relaxed mb-7"
-                  style={{ color: "var(--text-mid)" }}
-                >
-                  Included campaign support, expanded coverage, or an add-on.
-                  Never a separate service.
-                </p>
-                <ul className="space-y-6">
-                  {brand.supporting.map((s) => (
-                    <li key={s.name}>
-                      <div className="flex flex-wrap items-baseline gap-x-3 mb-1">
-                        <p
-                          className="font-semibold text-base"
-                          style={{ color: "var(--navy)" }}
-                        >
-                          {s.name}
-                        </p>
-                        <span
-                          className="text-[10px] font-semibold uppercase tracking-[0.12em] px-2 py-0.5 rounded-full"
-                          style={{
-                            background: "var(--off-white)",
-                            color: "var(--text-soft)",
-                          }}
-                        >
-                          {s.kind}
-                        </span>
-                      </div>
-                      <p
-                        className="text-sm leading-relaxed"
-                        style={{ color: "var(--text-mid)" }}
-                      >
-                        {s.body}
-                      </p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </Reveal>
-          </div>
+                    <span
+                      aria-hidden
+                      className="flex-shrink-0 mt-0.5 w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold"
+                      style={{ background: "var(--warm-gray)", color: "var(--navy)" }}
+                    >
+                      ×
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Reveal>
         </div>
       </section>
 
-      {/* PILOT */}
-      <section id="pilot" className="py-24 md:py-32" style={{ background: "white" }}>
+      {/* HOW IT WORKS */}
+      <section id="services" className="py-24 md:py-32" style={{ background: "white" }}>
         <div className="max-w-6xl mx-auto px-5">
           <Reveal>
             <div className="mb-14 max-w-2xl">
@@ -371,142 +282,52 @@ export default function Home() {
                 className="text-xs font-semibold uppercase tracking-[0.18em] mb-4"
                 style={{ color: "var(--gold)" }}
               >
-                Where everyone starts
+                How it works
               </p>
               <h2
                 className="font-display text-4xl md:text-5xl font-bold tracking-[-0.02em]"
                 style={{ color: "var(--navy)" }}
               >
-                The pilot.
+                From list to next step.
               </h2>
-              <p
-                className="mt-5 text-lg leading-relaxed"
-                style={{ color: "var(--text-mid)" }}
-              >
-                {pilot.summary} {pilot.body}
-              </p>
             </div>
           </Reveal>
 
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-6">
-            <Reveal distance={30}>
-              <div
-                className="h-full rounded-2xl p-9 md:p-10 border"
-                style={{
-                  background: "var(--navy)",
-                  borderColor: "var(--navy)",
-                  boxShadow: "0 34px 80px -40px rgba(15,37,64,0.6)",
-                }}
-              >
-                <div className="flex items-baseline gap-3">
+          <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {brand.howItWorks.map((step, i) => (
+              <Reveal as="li" key={step.title} delay={i * 90} distance={28}>
+                <div
+                  className="h-full rounded-2xl p-7 border"
+                  style={{ background: "var(--off-white)", borderColor: "var(--line)" }}
+                >
                   <span
-                    className="font-display text-6xl font-bold leading-none"
-                    style={{ color: "var(--gold)" }}
+                    className="flex w-10 h-10 rounded-full items-center justify-center text-sm font-bold mb-5"
+                    style={{ background: "var(--navy)", color: "var(--gold)" }}
                   >
-                    {pilot.price}
+                    {i + 1}
                   </span>
-                  <span className="text-sm" style={{ color: "#a8c0d8" }}>
-                    {pilot.priceNote}
-                  </span>
-                </div>
-                <p className="mt-5 text-lg text-white">
-                  {pilot.dials} over {pilot.window}.
-                </p>
-                <p
-                  className="mt-3 text-base leading-relaxed"
-                  style={{ color: "#a8c0d8" }}
-                >
-                  {pilot.runsOn}
-                </p>
-
-                <div
-                  className="mt-8 pt-7 border-t"
-                  style={{ borderColor: "rgba(255,255,255,0.15)" }}
-                >
                   <p
-                    className="text-[11px] font-semibold uppercase tracking-[0.16em] mb-2"
-                    style={{ color: "var(--gold)" }}
+                    className="font-semibold text-lg mb-2"
+                    style={{ color: "var(--navy)" }}
                   >
-                    {pilot.criteria.title}
+                    {step.title}
                   </p>
-                  <p className="text-sm leading-relaxed" style={{ color: "#a8c0d8" }}>
-                    {pilot.criteria.body}
+                  <p className="text-sm leading-relaxed" style={{ color: "var(--text-mid)" }}>
+                    {step.body}
                   </p>
                 </div>
+              </Reveal>
+            ))}
+          </ol>
 
-                <div
-                  className="mt-8 pt-7 border-t"
-                  style={{ borderColor: "rgba(255,255,255,0.15)" }}
-                >
-                  <p
-                    className="text-[11px] font-semibold uppercase tracking-[0.16em] mb-2"
-                    style={{ color: "var(--gold)" }}
-                  >
-                    Add on: {pilot.addon.name} — {pilot.addon.price}
-                  </p>
-                  <p className="text-sm leading-relaxed" style={{ color: "#a8c0d8" }}>
-                    {pilot.addon.body}
-                  </p>
-                </div>
-
-                <p
-                  className="mt-8 text-sm leading-relaxed"
-                  style={{ color: "#a8c0d8" }}
-                >
-                  {pilot.honest}
-                </p>
-
-                <a
-                  href={brand.calendlyUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-7 block w-full py-4 rounded font-semibold text-center transition-transform duration-300 hover:-translate-y-0.5"
-                  style={{ background: "var(--gold)", color: "var(--navy-dark)" }}
-                >
-                  Talk through a pilot
-                </a>
-              </div>
-            </Reveal>
-
-            <Reveal delay={100} distance={30}>
-              <div
-                className="h-full rounded-2xl p-9 md:p-10 border"
-                style={{ background: "var(--off-white)", borderColor: "var(--line)" }}
-              >
-                <p
-                  className="font-display text-2xl font-semibold mb-3"
-                  style={{ color: "var(--navy)" }}
-                >
-                  What you can get out of it
-                </p>
-                <p
-                  className="text-sm leading-relaxed mb-7"
-                  style={{ color: "var(--text-mid)" }}
-                >
-                  Two weeks of real calls tell you something either way. Any of
-                  these count as a result:
-                </p>
-                <ul className="space-y-4">
-                  {pilot.outcomes.map((o) => (
-                    <li
-                      key={o}
-                      className="flex gap-3 text-sm leading-relaxed"
-                      style={{ color: "var(--text-mid)" }}
-                    >
-                      <span
-                        aria-hidden
-                        className="flex-shrink-0 mt-1 w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold"
-                        style={{ background: "var(--gold)", color: "var(--navy-dark)" }}
-                      >
-                        ✓
-                      </span>
-                      {o}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </Reveal>
-          </div>
+          <Reveal delay={200}>
+            <p
+              className="mt-8 text-sm leading-relaxed max-w-2xl"
+              style={{ color: "var(--text-soft)" }}
+            >
+              {brand.emailNote}
+            </p>
+          </Reveal>
         </div>
       </section>
 
@@ -525,15 +346,8 @@ export default function Home() {
                 className="font-display text-4xl md:text-5xl font-bold tracking-[-0.02em]"
                 style={{ color: "var(--navy)" }}
               >
-                Is this for you?
+                Who it&apos;s for.
               </h2>
-              <p
-                className="mt-5 text-lg leading-relaxed"
-                style={{ color: "var(--text-mid)" }}
-              >
-                Cold calling works well for some businesses and badly for
-                others. It is cheaper for both of us to sort that out now.
-              </p>
             </div>
           </Reveal>
 
@@ -547,7 +361,7 @@ export default function Home() {
                   className="font-display text-2xl font-semibold mb-6"
                   style={{ color: "var(--navy)" }}
                 >
-                  This is for you if
+                  A good fit
                 </p>
                 <ul className="space-y-4">
                   {fit.yes.map((item) => (
@@ -579,7 +393,7 @@ export default function Home() {
                   className="font-display text-2xl font-semibold mb-6"
                   style={{ color: "var(--navy)" }}
                 >
-                  This probably is not for you if
+                  Not a fit
                 </p>
                 <ul className="space-y-4">
                   {fit.no.map((item) => (
@@ -591,10 +405,7 @@ export default function Home() {
                       <span
                         aria-hidden
                         className="flex-shrink-0 mt-0.5 w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold"
-                        style={{
-                          background: "var(--warm-gray)",
-                          color: "var(--navy)",
-                        }}
+                        style={{ background: "var(--warm-gray)", color: "var(--navy)" }}
                       >
                         ×
                       </span>
@@ -608,14 +419,121 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PROOF */}
-      <Proof />
-
-      {/* ABOUT STRIP */}
-      <section className="py-24 md:py-32" style={{ background: "white" }}>
-        <div className="max-w-6xl mx-auto px-5 grid grid-cols-1 md:grid-cols-2 gap-14 lg:gap-20 items-center">
+      {/* PILOT */}
+      <section id="pilot" className="py-24 md:py-32" style={{ background: "white" }}>
+        <div className="max-w-6xl mx-auto px-5">
           <Reveal>
-            <div className="flex items-center gap-5 mb-7">
+            <div className="mb-14 max-w-2xl">
+              <p
+                className="text-xs font-semibold uppercase tracking-[0.18em] mb-4"
+                style={{ color: "var(--gold)" }}
+              >
+                Where everyone starts
+              </p>
+              <h2
+                className="font-display text-4xl md:text-5xl font-bold tracking-[-0.02em]"
+                style={{ color: "var(--navy)" }}
+              >
+                Pilot and ongoing engagement.
+              </h2>
+            </div>
+          </Reveal>
+
+          <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_1fr] gap-6">
+            <Reveal distance={30}>
+              <div
+                className="h-full rounded-2xl p-9 md:p-10 border"
+                style={{
+                  background: "var(--navy)",
+                  borderColor: "var(--navy)",
+                  boxShadow: "0 34px 80px -40px rgba(15,37,64,0.6)",
+                }}
+              >
+                <p
+                  className="text-[11px] font-semibold uppercase tracking-[0.16em] mb-3"
+                  style={{ color: "var(--gold)" }}
+                >
+                  Pilot · {pilot.window}
+                </p>
+                <div className="flex items-baseline gap-3">
+                  <span className="text-sm" style={{ color: "#a8c0d8" }}>
+                    {pilot.priceLead}
+                  </span>
+                  <span
+                    className="font-display text-6xl font-bold leading-none"
+                    style={{ color: "var(--gold)" }}
+                  >
+                    {pilot.price}*
+                  </span>
+                </div>
+
+                <ul className="mt-8 space-y-4">
+                  {pilot.scope.map((item) => (
+                    <li
+                      key={item}
+                      className="flex gap-3 text-sm leading-relaxed"
+                      style={{ color: "#c8d8e8" }}
+                    >
+                      <span
+                        aria-hidden
+                        className="flex-shrink-0 mt-0.5 w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold"
+                        style={{ background: "var(--gold)", color: "var(--navy-dark)" }}
+                      >
+                        ✓
+                      </span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+
+                <p
+                  className="mt-8 pt-7 border-t text-base leading-relaxed text-white"
+                  style={{ borderColor: "rgba(255,255,255,0.15)" }}
+                >
+                  {pilot.guarantee}
+                </p>
+
+                <a
+                  href={brand.calendlyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-8 block w-full py-4 rounded font-semibold text-center transition-transform duration-300 hover:-translate-y-0.5"
+                  style={{ background: "var(--gold)", color: "var(--navy-dark)" }}
+                >
+                  Book a Call
+                </a>
+
+                <p className="mt-6 text-xs leading-relaxed" style={{ color: "#8fa8c0" }}>
+                  {pilot.footnote}
+                </p>
+              </div>
+            </Reveal>
+
+            <Reveal delay={100} distance={30}>
+              <div
+                className="rounded-2xl p-9 md:p-10 border"
+                style={{ background: "var(--off-white)", borderColor: "var(--line)" }}
+              >
+                <p
+                  className="font-display text-2xl font-semibold mb-4"
+                  style={{ color: "var(--navy)" }}
+                >
+                  {ongoing.title}
+                </p>
+                <p className="text-base leading-relaxed" style={{ color: "var(--text-mid)" }}>
+                  {ongoing.body}
+                </p>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* CALLER CAPACITY */}
+      <section className="py-24 md:py-32" style={{ background: "var(--off-white)" }}>
+        <div className="max-w-4xl mx-auto px-5">
+          <Reveal>
+            <div className="flex items-center gap-5 mb-8">
               <span
                 className="relative flex-shrink-0 rounded-full p-[3px]"
                 style={{
@@ -633,12 +551,6 @@ export default function Home() {
                 />
               </span>
               <div>
-                <p
-                  className="text-xs font-semibold uppercase tracking-[0.18em] mb-1.5"
-                  style={{ color: "var(--gold)" }}
-                >
-                  Who is behind this
-                </p>
                 <p className="font-semibold" style={{ color: "var(--navy)" }}>
                   {brand.owner}
                 </p>
@@ -652,86 +564,30 @@ export default function Home() {
               className="font-display text-4xl md:text-5xl font-bold mb-6 leading-[1.08] tracking-[-0.02em]"
               style={{ color: "var(--navy)" }}
             >
-              Cold calling is <br />
-              at the core.
+              {capacity.title}.
             </h2>
-            <p
-              className="text-base leading-relaxed mb-5"
-              style={{ color: "var(--text-mid)" }}
-            >
-              Angelo Books runs cold-calling campaigns for growing AI companies
-              and a small number of B2B businesses with an offer that already
-              sells. The main service is managed cold calling. Everything else,
-              from the messaging to the follow-up to list building, is campaign
-              support around it rather than a second service.
-            </p>
-            <p
-              className="text-base leading-relaxed mb-9"
-              style={{ color: "var(--text-mid)" }}
-            >
-              The business is founder-led. I lead every campaign, along with the
-              messaging and the quality control, and as it grows I will bring on
-              a small team held to the same standard. You will always know who
-              is calling on your behalf and what they are saying.
-            </p>
-            <Link
-              href="/about"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded border font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5"
-              style={{ color: "var(--navy)", borderColor: "var(--navy)" }}
-            >
-              Full story <span aria-hidden>→</span>
-            </Link>
-          </Reveal>
-
-          <Reveal delay={120} distance={34}>
-            <div
-              className="rounded-3xl p-9 md:p-10 border"
-              style={{
-                background: "var(--off-white)",
-                borderColor: "var(--line)",
-                boxShadow: "0 30px 70px -40px rgba(15,37,64,0.4)",
-              }}
-            >
+            {capacity.body.map((para) => (
               <p
-                className="font-display text-2xl font-semibold mb-4"
-                style={{ color: "var(--navy)" }}
-              >
-                {ongoing.title}
-              </p>
-              <p
-                className="text-sm leading-relaxed mb-7"
+                key={para}
+                className="text-lg leading-relaxed mb-5"
                 style={{ color: "var(--text-mid)" }}
               >
-                {ongoing.body}
+                {para}
               </p>
-              <ul className="space-y-4">
-                {ongoing.endorsed.map((item) => (
-                  <li
-                    key={item}
-                    className="flex gap-3 text-sm leading-relaxed"
-                    style={{ color: "var(--text-mid)" }}
-                  >
-                    <span
-                      aria-hidden
-                      className="flex-shrink-0 mt-0.5 w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold text-white"
-                      style={{ background: "var(--navy)" }}
-                    >
-                      ✓
-                    </span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <p
-                className="mt-7 pt-6 border-t text-sm leading-relaxed"
-                style={{ borderColor: "var(--line)", color: "var(--text-soft)" }}
-              >
-                {ongoing.note}
-              </p>
-            </div>
+            ))}
+            <Link
+              href="/about"
+              className="mt-4 inline-flex items-center gap-2 px-6 py-3 rounded border font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5"
+              style={{ color: "var(--navy)", borderColor: "var(--navy)" }}
+            >
+              About Angelo <span aria-hidden>→</span>
+            </Link>
           </Reveal>
         </div>
       </section>
+
+      {/* PROOF */}
+      <Proof />
 
       {/* ARTICLES */}
       <section
@@ -875,9 +731,9 @@ export default function Home() {
             Find out if calling works for your offer.
           </h2>
           <p className="text-lg mb-9" style={{ color: "#a8c0d8" }}>
-            Book a call. We will go through what you sell, who you want to
-            reach, and whether a {pilot.price} pilot is worth running. If it is
-            not, I will tell you.
+            Book a call. We&apos;ll go through what you sell, who you want to
+            reach, and whether a pilot is worth running. If it isn&apos;t,
+            I&apos;ll tell you.
           </p>
           <a
             href={brand.calendlyUrl}
@@ -892,6 +748,16 @@ export default function Home() {
           >
             Book a Call with Angelo
           </a>
+          <p className="mt-6 text-sm" style={{ color: "#8fa8c0" }}>
+            Prefer the phone?{" "}
+            <a
+              href={brand.phoneHref}
+              className="underline underline-offset-4 transition-colors hover:text-white"
+              style={{ color: "var(--gold-light)" }}
+            >
+              {brand.phone}
+            </a>
+          </p>
         </Reveal>
       </section>
     </>

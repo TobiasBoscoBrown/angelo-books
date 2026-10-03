@@ -84,7 +84,7 @@ export default async function ArticlePage({
           "@type": "Person",
           name: brand.owner,
           jobTitle: brand.founderRole,
-          url: brand.linkedin,
+          url: brand.threads,
         },
         publisher: {
           "@type": "Organization",

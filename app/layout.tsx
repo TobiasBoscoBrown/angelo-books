@@ -19,14 +19,14 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Angelo Books | Managed Cold Calling for AI Companies and B2B",
+  title: "Angelo Books | Cold Calling, Run for You",
   description:
-    "Managed cold-calling campaigns for growing AI companies and select B2B businesses with a proven offer. Start with a $500 pilot: 500 dials over two weeks. US and Australia.",
+    "Cold calling, run for you. Global B2B campaigns. Pilot engagements start at $1,500 and include a minimum of 10 qualified conversations.",
   alternates: { canonical: SITE_URL },
   openGraph: {
-    title: "Angelo Books | Managed Cold Calling for AI Companies and B2B",
+    title: "Angelo Books | Cold Calling, Run for You",
     description:
-      "Cold calling, run for you. A $500 pilot tells you whether it works for your offer.",
+      "Pilot engagements start at $1,500 and include a minimum of 10 qualified conversations. If we don't reach 10, I keep calling until we do.",
     type: "website",
     url: SITE_URL,
     siteName: "Angelo Books",
@@ -35,15 +35,15 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "Angelo Books: managed cold-calling campaigns for AI companies and B2B. Angelo Miguel, founder.",
+        alt: "Angelo Books: cold calling, run for you. Angelo Miguel, founder.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Angelo Books | Managed Cold Calling for AI Companies and B2B",
+    title: "Angelo Books | Cold Calling, Run for You",
     description:
-      "Cold calling, run for you. A $500 pilot tells you whether it works for your offer.",
+      "Pilot engagements start at $1,500 and include a minimum of 10 qualified conversations. If we don't reach 10, I keep calling until we do.",
     images: ["/og.png"],
   },
 };

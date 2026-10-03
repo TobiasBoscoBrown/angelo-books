@@ -48,7 +48,7 @@ export default function ProofGallery() {
 
   return (
     <>
-      <div className="mt-14 grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6">
         {shots.map((p, i) => (
           <Reveal key={p.src} delay={i * 110} distance={34}>
             <figure
