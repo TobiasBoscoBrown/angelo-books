@@ -188,12 +188,6 @@ export const articles: Article[] = [
         t: "p",
         text: "The third option is handing the dialing to someone who already does it, on a campaign basis, and keeping the closing. That is what Angelo Books is. The numbers in this article are ours, the screenshots are the actual client threads, and the person who picks up your call is the person who runs your campaign.",
       },
-      {
-        t: "quote",
-        text: "I book qualified meetings for marketing agencies in the US and AU.",
-        cite: "Angelo Miguel, founder of Angelo Books",
-      },
-
       { t: "h2", text: "Frequently asked questions", id: "faq" },
       {
         t: "faq",

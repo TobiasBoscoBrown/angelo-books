@@ -66,10 +66,10 @@ export default async function ServicePage({
               </Link>
               <span aria-hidden>/</span>
               <Link
-                href="/#services"
+                href="/#how-it-works"
                 className="transition-colors hover:text-white"
               >
-                What I do
+                How it works
               </Link>
               <span aria-hidden>/</span>
               <span style={{ color: "var(--gold)" }}>{service.name}</span>
@@ -108,11 +108,11 @@ export default async function ServicePage({
                 Book a Call
               </a>
               <Link
-                href="/#pilot"
+                href="/#engagements"
                 className="px-7 py-4 font-semibold rounded border text-center text-white transition-transform duration-300 hover:-translate-y-0.5"
                 style={{ borderColor: "rgba(255,255,255,0.28)" }}
               >
-                See the pilot
+                See engagements
               </Link>
             </div>
           </Reveal>
@@ -185,11 +185,11 @@ export default async function ServicePage({
             </Reveal>
 
             <ol className="relative">
-              {service.steps.map((step, i) => (
+              {brand.howItWorks.map((step, i) => (
                 <Reveal as="li" key={step.title} delay={i * 90} distance={28}>
                   <div className="relative flex gap-6 pb-10 last:pb-0">
                     {/* connector rail */}
-                    {i < service.steps.length - 1 && (
+                    {i < brand.howItWorks.length - 1 && (
                       <span
                         aria-hidden
                         className="absolute left-[19px] top-11 bottom-0 w-px"
@@ -241,7 +241,7 @@ export default async function ServicePage({
               className="font-display text-3xl md:text-4xl font-bold mb-10"
               style={{ color: "var(--navy)" }}
             >
-              Every {service.name.toLowerCase()} engagement includes
+              Every engagement includes
             </h2>
           </Reveal>
 
@@ -290,15 +290,16 @@ export default async function ServicePage({
               />
               <div className="relative max-w-xl">
                 <h2 className="font-display text-3xl md:text-4xl font-bold text-white leading-tight">
-                  Start with a pilot.
+                  Talk it through first.
                 </h2>
                 <p
                   className="mt-4 text-base leading-relaxed"
                   style={{ color: "#a8c0d8" }}
                 >
                   Book a call with {brand.owner} and talk through what you sell,
-                  who you want to reach, and whether a pilot is worth running.
-                  You will be talking to the person who leads your campaign.
+                  who you want to reach, and whether a focused pilot or an
+                  ongoing engagement makes sense. You&apos;ll be talking to the
+                  person who leads the work.
                 </p>
                 <a
                   href={brand.calendlyUrl}

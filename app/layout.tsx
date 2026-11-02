@@ -19,14 +19,14 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Angelo Books | Cold Calling, Run for You",
+  title: "Angelo Books | Founder-Led Outbound Business Development",
   description:
-    "Cold calling, run for you. Global B2B campaigns. Pilot engagements start at $1,500 and include a minimum of 10 qualified conversations.",
+    "Founder-led, calling-first business development for established B2B companies. We help you reach and engage the decision-makers who matter. Book a call.",
   alternates: { canonical: SITE_URL },
   openGraph: {
-    title: "Angelo Books | Cold Calling, Run for You",
+    title: "Angelo Books | Founder-Led Outbound Business Development",
     description:
-      "Pilot engagements start at $1,500 and include a minimum of 10 qualified conversations. If we don't reach 10, I keep calling until we do.",
+      "Founder-led, calling-first business development for established B2B companies. We help you reach and engage the decision-makers who matter. Book a call.",
     type: "website",
     url: SITE_URL,
     siteName: "Angelo Books",
@@ -35,15 +35,15 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "Angelo Books: cold calling, run for you. Angelo Miguel, founder.",
+        alt: "Angelo Books: the right conversations can change your business. Angelo Miguel, founder.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Angelo Books | Cold Calling, Run for You",
+    title: "Angelo Books | Founder-Led Outbound Business Development",
     description:
-      "Pilot engagements start at $1,500 and include a minimum of 10 qualified conversations. If we don't reach 10, I keep calling until we do.",
+      "Founder-led, calling-first business development for established B2B companies. We help you reach and engage the decision-makers who matter. Book a call.",
     images: ["/og.png"],
   },
 };

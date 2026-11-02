@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Angelo Miguel | Angelo Books",
   description:
-    "Angelo Books is a founder-led cold-calling operation run by Angelo Miguel, running global B2B cold-calling campaigns for companies with a proven offer.",
+    "Angelo Books is a founder-led outbound business development partner run by Angelo Miguel. Calling-first, human-led outreach for established B2B companies with a proven offer.",
 };
 
 export default function About() {
@@ -67,9 +67,9 @@ export default function About() {
         <div className="max-w-3xl mx-auto px-5">
           <div className="prose prose-lg max-w-none" style={{ color: "var(--text-mid)" }}>
             <p className="text-xl font-semibold leading-relaxed" style={{ color: "var(--navy)" }}>
-              Angelo Books runs cold calling for B2B companies with a proven
-              offer, in any market with enough reachable prospects to support
-              outbound.
+              Angelo Books is a founder-led outbound business development
+              partner for established B2B companies. Direct calls are at the
+              center of it.
             </p>
             <p className="mt-6 leading-relaxed">
               Plenty of companies build something good and then find out that
@@ -81,22 +81,20 @@ export default function About() {
             </p>
             <p className="mt-5 leading-relaxed">
               That&apos;s the gap Angelo Miguel started Angelo Books to fill.
-              Every engagement starts with a two-week pilot that guarantees at
-              least 10 qualified conversations: live conversations with the
-              right person, who understands why he&apos;s calling. Meetings get
-              booked where there&apos;s a genuine reason for one. The rest tells
-              you what the market is saying.
+              We identify the decision-makers who matter, reach them directly,
+              and have real conversations. Meetings get booked where there&apos;s
+              a credible reason for one, and the rest tells you what the market
+              is saying.
             </p>
             <p className="mt-5 leading-relaxed">
-              Angelo uses his own dialer and campaign-tracking setup, so
-              there&apos;s nothing for you to set up. Bring a call-ready list, or
-              he&apos;ll build one.
+              We bring our own calling and tracking infrastructure, and we can
+              work in your systems if you prefer. Bring a call-ready list, or we
+              can scope research and sourcing separately.
             </p>
             <p className="mt-5 leading-relaxed">
-              If a campaign needs more calling capacity or faster market
-              coverage, Angelo brings in an additional pair of callers and
-              manages them directly. He stays hands-on and accountable for the
-              quality of the work.
+              When an engagement needs more coverage, additional callers are
+              brought in and managed directly. Angelo stays responsible for
+              strategy, quality, and reporting.
             </p>
           </div>
 
@@ -142,11 +140,11 @@ export default function About() {
               Book a Call with Angelo
             </a>
             <Link
-              href="/services/cold-calling"
+              href="/services/outbound-business-development"
               className="px-7 py-4 rounded font-semibold text-center border transition-all duration-300 hover:-translate-y-0.5"
               style={{ color: "var(--navy)", borderColor: "var(--navy)" }}
             >
-              See how a campaign runs
+              See how we work
             </Link>
           </div>
 

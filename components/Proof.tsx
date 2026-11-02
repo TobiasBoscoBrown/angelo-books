@@ -5,7 +5,7 @@ import ProofGallery from "@/components/ProofGallery";
 export default function Proof() {
   return (
     <section
-      id="proof"
+      id="results"
       className="relative py-24 md:py-32 overflow-hidden"
       style={{ background: "var(--navy-dark)" }}
     >
@@ -25,7 +25,7 @@ export default function Proof() {
             className="text-xs font-semibold uppercase tracking-[0.18em] mb-4"
             style={{ color: "var(--gold)" }}
           >
-            Receipts
+            Results
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-white leading-[1.08] max-w-2xl">
             Real campaigns. <br className="hidden sm:block" />

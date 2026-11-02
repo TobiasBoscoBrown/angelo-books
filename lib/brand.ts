@@ -1,171 +1,159 @@
 export const brand = {
   name: "Angelo Books",
   owner: "Angelo Miguel",
-  tagline: "Cold calling, run for you. Global B2B campaigns.",
-  subTagline:
-    "Bring a call-ready list, or I'll build one. I handle the calling setup, make the calls, follow up by email where it makes sense, and book meetings when there's a real reason to continue the conversation.",
+  tagline: "Founder-led outbound business development for established B2B companies. Calling-first. Human-led.",
   phone: "+1 (209) 309-4812",
   phoneHref: "tel:+12093094812",
   email: "",
   // Primary CTA everywhere on the site.
   calendlyUrl: "https://calendar.app.google/8Q2NfBX5BLbPxdZ38",
-  serving: ["Global B2B campaigns"],
-  icpDescription:
-    "B2B companies with a proven offer and deals worth a real sales conversation",
+  serving: ["B2B outreach across agreed markets"],
+  icpDescription: "Established B2B companies with a proven offer",
   founded: "2024",
-  type: "Managed cold calling",
+  type: "Founder-led outbound business development",
   threads: "https://www.threads.com/@justangeloing",
-  // Angelo Books LinkedIn company page. Leave empty until the URL is
+  // Angelo Books LinkedIn company page. Leave empty until the verified URL is
   // confirmed: every LinkedIn link on the site hides itself while this is "".
+  // Never link the founder's personal profile here.
   linkedin: "",
   founderRole: "Founder",
-  founderQuote:
-    "I run cold-calling campaigns for B2B companies that already have something people buy.",
   accentColor: "#1a3a5c",
 
   hero: {
-    eyebrow: "Global B2B campaigns",
+    eyebrow: "Founder-led outbound business development",
     lead:
-      "Bring a call-ready list, or I'll build one. I handle the calling setup, make the calls, follow up by email where it makes sense, and book meetings when there's a real reason to continue the conversation.",
-    offer:
-      "Pilot engagements start at $1,500* and include a minimum of 10 qualified conversations.",
-    guarantee: "If we don't reach 10, I keep calling until we do.",
+      "We help B2B companies identify, reach, and engage the decision-makers who matter, through targeted prospecting, direct conversations, and thoughtful follow-up.",
+    tagline: "Calling-first. Human-led. Built around your business.",
+    scope: "Focused pilots and ongoing engagements, scoped around your market and goals.",
+    focus: [
+      "Relevant conversations",
+      "Qualified opportunities",
+      "Honest market feedback",
+    ],
+    focusNote: "Not activity for its own sake.",
   },
 
   qualified: {
-    is: "A live conversation with the right person, in the right context, where they understand why I'm calling and show enough interest to engage meaningfully, whether that becomes a meeting, a request for more information, a real follow-up opportunity, or a reasonable rejection.",
+    is: "A qualified conversation means we reached the right person, explained the reason for contact, and had a meaningful exchange that produced useful context or a credible next step.",
+    rejection:
+      "A genuine rejection after an informed discussion can count as a qualified conversation in a pilot. It is not a positive opportunity or a meeting.",
     isNot: [
-      "A receptionist pickup",
-      "Voicemail",
-      "The wrong person",
-      "A brush-off before they understand the reason for the call",
+      "Voicemails",
+      "Gatekeeper pickups",
+      "Wrong contacts",
+      "Dismissals before the prospect understands why we're calling",
     ],
+    scopeNote:
+      "Acceptance criteria, and any minimum number of conversations, are agreed in your signed scope. What we promise publicly is disciplined execution and transparent reporting.",
   },
 
   howItWorks: [
     {
-      title: "List",
-      body: "Bring a call-ready list, or I'll build one. Sourcing is quoted separately.",
+      title: "Targeting",
+      body: "We agree on the offer, ideal buyers, market, and qualification criteria. Bring a call-ready list, or we can scope research and sourcing separately.",
     },
     {
-      title: "Calls",
-      body: "I use my own dialer and campaign-tracking setup.",
+      title: "Engagement",
+      body: "Founder-led, calling-first outreach, supported by targeted email and LinkedIn where appropriate. We bring our own calling and tracking infrastructure; your systems are optional.",
     },
     {
-      title: "Conversations",
-      body: "The pilot guarantees at least 10 qualified conversations.",
+      title: "Qualification",
+      body: "We speak with relevant decision-makers, learn what matters to them, and separate real commercial interest from polite responses or poor fit.",
     },
     {
-      title: "Next step",
-      body: "Meetings are booked where they make sense. The rest tells us what the market is saying.",
+      title: "Follow-through",
+      body: "We book credible meetings where appropriate, nurture relevant prospects, and report on conversations, outcomes, and market feedback.",
     },
   ],
-  emailNote:
-    "Email follow-up is used where it supports a real conversation, callback, referral or next step. This is not a bulk cold-email service.",
+  channelNote:
+    "Direct calls are our strength. Email and LinkedIn support the conversation when they're relevant to the engagement. We don't do mass emailing, and we're not an outsourced sales team that closes deals for you.",
 
-  // Single core service, used by /services/cold-calling.
+  // Single core service, used by /services/outbound-business-development.
   services: [
     {
-      slug: "cold-calling",
-      name: "Cold Calling",
-      tagline: "Run for you, start to finish.",
+      slug: "outbound-business-development",
+      name: "Outbound Business Development",
+      tagline: "Calling-first. Human-led.",
       description:
-        "Bring a call-ready list, or I'll build one. I handle the calling setup, make the calls, follow up by email where it makes sense, and book meetings when there's a real reason to continue the conversation.",
+        "We help B2B companies identify, reach, and engage the decision-makers who matter, through targeted prospecting, direct conversations, and thoughtful follow-up.",
       detail:
-        "The pilot guarantees at least 10 qualified conversations. Meetings are booked where there's a genuine reason for one, and the rest tells us what the market is saying.",
+        "One tailored service: targeting, outreach, qualification, and follow-through, run by a founder-led team. Each engagement is scoped around your market and goals.",
       bestFor:
-        "B2B companies with a proven offer, deals worth a real sales conversation, and a sales process that can convert qualified meetings.",
-      steps: [
-        {
-          title: "List",
-          body: "Bring a call-ready list, or I'll build one. Sourcing is quoted separately.",
-        },
-        {
-          title: "Calls",
-          body: "I use my own dialer and campaign-tracking setup.",
-        },
-        {
-          title: "Conversations",
-          body: "The pilot guarantees at least 10 qualified conversations.",
-        },
-        {
-          title: "Next step",
-          body: "Meetings are booked where they make sense. The rest tells us what the market is saying.",
-        },
-      ],
+        "Established B2B companies with a proven offer, buyers worth a real conversation, and a team ready to move qualified opportunities forward.",
       deliverables: [
-        "One offer, one primary ICP and one defined market",
-        "A minimum of 10 qualified conversations",
-        "Meetings booked where there's a genuine reason for one",
-        "Call recordings and/or transcripts of qualified conversations, where legally permitted",
-        "Email follow-up where it supports a real conversation, callback, referral or next step",
+        "A written scope with deliverables, success criteria, and price agreed before work begins",
+        "Targeting and qualification criteria agreed up front",
+        "Founder-led, calling-first outreach to your agreed market",
+        "Email and LinkedIn follow-up where it supports a real conversation",
+        "Meetings booked where there's a credible reason for one",
+        "Reporting on conversations, outcomes, and market feedback",
       ],
     },
   ],
 
-  pilot: {
-    price: "$1,500",
-    priceLead: "Starting at",
-    window: "2 weeks",
-    scope: [
-      "One offer, one primary ICP and one defined market",
-      "Minimum 10 qualified conversations",
-      "Meetings are booked where there is a genuine reason for one",
-      "Call recordings and/or transcripts of qualified conversations are provided where legally permitted",
+  engagements: {
+    eyebrow: "Engagements",
+    headline: "The right approach depends on where you're starting.",
+    intro:
+      "Whether you're testing a new channel or looking for consistent outbound support, we scope engagements around your market, goals, and priorities.",
+    cards: [
+      {
+        title: "Focused Pilot",
+        for: "For businesses testing a defined market, offer, or outbound channel.",
+        body: "We agree on the audience, outreach scope, qualification criteria, and how we'll review the results.",
+      },
+      {
+        title: "Ongoing Engagement",
+        for: "For teams ready for consistent outbound support.",
+        body: "Ongoing targeting, outreach, qualification, follow-up, and reporting.",
+      },
     ],
-    guarantee:
-      "If we do not reach 10 qualified conversations within the two weeks for reasons within my control, I keep calling at no additional cost until we do.",
-    footnote:
-      "*The $1,500 pilot assumes the client provides a call-ready list. List sourcing and enrichment are scoped separately based on the market and difficulty of finding the right contacts.",
+    note:
+      "No one-size-fits-all packages. Each engagement is scoped and priced based on the target market, outreach complexity, and support required. We agree on the deliverables, success criteria, and price before work begins.",
   },
 
-  ongoing: {
-    title: "After the pilot",
-    body: "The pilot gives both sides something real to judge. We use its actual numbers to decide what a monthly engagement should look like, instead of making up a meeting target before the market has been called.",
-  },
-
-  capacity: {
-    title: "Flexible caller capacity",
+  delivery: {
+    title: "Work directly with the founder",
     body: [
-      "Need the whole calling motion run for you? I can handle it. Already have the list, offer and sales process and just need an experienced caller? I can plug into that too.",
-      "If the campaign needs more calling capacity or faster market coverage, I can bring in an additional pair of callers and manage them directly. I stay hands-on and accountable for the quality of the work.",
+      "You work directly with an experienced, founder-led team. We can run the full outbound motion, or plug into your existing offer and sales process.",
+      "When an engagement needs more coverage, we bring in additional callers and manage them directly. Angelo stays responsible for strategy, quality, and reporting.",
     ],
   },
 
   fit: {
     yes: [
-      "B2B companies with a proven offer or clear evidence that customers already buy.",
-      "Deals valuable enough that a real sales conversation matters, ideally $10k+ ACV/LTV.",
-      "A clear, identifiable market with enough reachable prospects to support outbound.",
-      "A sales process that can convert qualified meetings, ideally 20%+ close rate.",
-      "A team that wants experienced calling and honest market feedback, not a guaranteed calendar.",
+      "Established B2B companies with a proven offer and evidence of paying customers. We can test a new outbound channel; we don't test whether the product has a market.",
+      "Generally $20,000+ in average contract, project, or first-year customer value, and $30,000+ is especially attractive. These are guidelines, not hard cutoffs: lower values can work when margin, repeat purchases, retention, or conversion support the economics.",
+      "An identifiable market with enough reachable decision-makers to sustain a meaningful test or campaign. Strategic partnership, investment, and acquisition outreach may qualify under a different value model.",
+      "A team with the capacity to handle qualified leads and move opportunities forward.",
+      "Businesses validating whether cold calling can work for them, with a proven offer, a sensible target market, and the budget for a properly scoped test.",
     ],
     no: [
-      "The offer is still unproven and cold calling is being used to figure out whether anyone wants it.",
-      "The market is so small that sustained outbound would burn through it quickly.",
-      "The economics only work if the campaign produces a high volume of cheap meetings.",
-      "The client wants meetings guaranteed regardless of list quality, offer, timing or market response.",
-      "The client wants me dependent on a complicated internal dialer/CRM setup to do the job.",
+      "You're still learning whether anyone wants the product. Testing an outbound channel is fine; using cold calling in place of basic offer validation is not.",
+      "Your reachable market is too narrow for the proposed campaign, or the budget can't support a meaningful test.",
+      "Your economics depend on very cheap, high-volume appointments rather than commercially meaningful conversations.",
+      "You're expecting guaranteed revenue or guaranteed meetings, regardless of targeting, offer, sales follow-up, or market response.",
+      "You're looking for commission-only or pay-after-results work, or there's nobody to follow up with qualified prospects. We work on prepaid, agreed scopes.",
     ],
   },
 
+  pricing:
+    "Engagements are tailored to your business. Pricing depends on who we're targeting, the complexity of the outreach, and the level of support required. Every engagement has an agreed scope, success criteria, and pricing before work begins.",
+
+  // Verified activity from earlier campaigns. Meetings here were booked, not
+  // confirmed as held, so they are labelled that way. Dials are supporting
+  // context only. Don't add pipeline value without an accepted opportunity.
   results: [
     {
-      metric: "390",
-      label: "Dials in one week",
-      context: "Mar 31 to Apr 4, on a single client campaign",
-      clientFeedback: null,
-    },
-    {
       metric: "22",
-      label: "Appointments set",
-      context: "from those 390 dials, in that same week",
+      label: "Meetings booked in one week",
+      context: "Mar 31 to Apr 4, single client campaign, from 390 dials",
       clientFeedback: "Excellent work!",
     },
     {
       metric: "7",
-      label: "Appointments set",
-      context: "from 85 dials on an earlier campaign",
+      label: "Meetings booked",
+      context: "earlier campaign, from 85 dials",
       clientFeedback: "Great work!",
     },
   ],
@@ -178,8 +166,8 @@ export const brand = {
       src: "/proof/proof-2.png",
       width: 554,
       height: 287,
-      kicker: "One week of dialing",
-      note: "390 dials and 22 appointments set, March 31 to April 4.",
+      kicker: "One week of calling",
+      note: "22 meetings booked from 390 dials, March 31 to April 4.",
       alt: "Weekly report screenshot reading: Meeting Preps 25, Dials 390, Appointments Set 22, from March 31 to April 4.",
     },
     {
@@ -187,7 +175,7 @@ export const brand = {
       width: 541,
       height: 426,
       kicker: "A single day",
-      note: "Four appointments booked in one day. The client replied: Excellent work!",
+      note: "Four meetings booked in one day. The client replied: Excellent work!",
       alt: "Client message thread in which Angelo reports four appointments booked for the day and the client replies, Excellent work!",
     },
     {
@@ -195,7 +183,7 @@ export const brand = {
       width: 547,
       height: 352,
       kicker: "A campaign, end to end",
-      note: "85 dials and 7 appointments set. The client replied: Great work!",
+      note: "7 meetings booked from 85 dials. The client replied: Great work!",
       alt: "Client message thread showing a campaign summary of 2 meeting preps, 85 dials and 7 appointments set, with the client replying, Great work!",
     },
     {
@@ -209,108 +197,60 @@ export const brand = {
   ],
 
   proofNote:
-    "These threads are from earlier campaigns that included meeting preparation in scope. Prep is not part of the current offer, so read the dials and the appointments.",
+    "These are meetings booked, not meetings held or closed deals, and dials are shown only as context. The campaigns also included meeting preparation, which isn't part of the current offer.",
 
   // Businesses that hired Angelo to run outbound. Logos supplied by Angelo.
   clients: [
-    {
-      src: "/clients/build-my-tribe.png",
-      width: 196,
-      height: 27,
-      name: "Build My Tribe",
-      alt: "Build My Tribe logo",
-    },
-    {
-      src: "/clients/localsearch.png",
-      width: 148,
-      height: 35,
-      name: "localsearch",
-      alt: "localsearch logo",
-    },
-    {
-      src: "/clients/nick-tann.png",
-      width: 187,
-      height: 21,
-      name: "Nick Tann",
-      alt: "Nick Tann logo",
-    },
-    {
-      src: "/clients/revstar.png",
-      width: 93,
-      height: 56,
-      name: "Revstar",
-      alt: "Revstar logo",
-    },
-    {
-      src: "/clients/dania-accounting.png",
-      width: 108,
-      height: 48,
-      name: "Dania Accounting",
-      alt: "Dania Accounting logo",
-    },
-    {
-      src: "/clients/elysian-construction.png",
-      width: 106,
-      height: 49,
-      name: "Elysian Construction",
-      alt: "Elysian Construction logo",
-    },
-    {
-      src: "/clients/unknown-bulb.png",
-      width: 48,
-      height: 72,
-      name: null,
-      alt: "Client logo",
-    },
-    {
-      src: "/clients/unknown-mark.png",
-      width: 83,
-      height: 63,
-      name: null,
-      alt: "Client logo",
-    },
+    { src: "/clients/build-my-tribe.png", width: 196, height: 27, name: "Build My Tribe", alt: "Build My Tribe logo" },
+    { src: "/clients/localsearch.png", width: 148, height: 35, name: "localsearch", alt: "localsearch logo" },
+    { src: "/clients/nick-tann.png", width: 187, height: 21, name: "Nick Tann", alt: "Nick Tann logo" },
+    { src: "/clients/revstar.png", width: 93, height: 56, name: "Revstar", alt: "Revstar logo" },
+    { src: "/clients/dania-accounting.png", width: 108, height: 48, name: "Dania Accounting", alt: "Dania Accounting logo" },
+    { src: "/clients/elysian-construction.png", width: 106, height: 49, name: "Elysian Construction", alt: "Elysian Construction logo" },
+    { src: "/clients/unknown-bulb.png", width: 48, height: 72, name: null, alt: "Client logo" },
+    { src: "/clients/unknown-mark.png", width: 83, height: 63, name: null, alt: "Client logo" },
   ],
 
   faqs: [
     {
-      q: "What does the pilot include?",
-      a: "Two weeks of calling for one offer, one primary ICP and one defined market, with a minimum of 10 qualified conversations. Meetings get booked where there's a genuine reason for one, and you get call recordings and/or transcripts of the qualified conversations where legally permitted. Pilots start at $1,500, which assumes you provide a call-ready list.",
+      q: "How much does an engagement cost?",
+      a: "Every engagement is scoped and priced individually, based on who we're targeting, the complexity of the outreach, and the level of support required. We agree on the scope, success criteria, and price in writing before any work begins.",
     },
     {
-      q: "What if you don't reach 10 qualified conversations?",
-      a: "If we don't reach 10 within the two weeks for reasons within my control, I keep calling at no additional cost until we do.",
+      q: "Who is a good fit?",
+      a: "Established B2B companies with a proven offer, buyers worth a real sales conversation (generally $20,000+ in contract or first-year value, though that's a guideline), a market with enough reachable decision-makers, and a team that can follow up on qualified prospects.",
     },
     {
-      q: "Do you guarantee meetings?",
-      a: "No. The guarantee is qualified conversations. Meetings are booked when there's a real reason to continue the conversation, so you don't end up with a calendar full of weak ones.",
+      q: "What's the difference between a pilot and an ongoing engagement?",
+      a: "A focused pilot tests a defined market, offer, or outbound channel against criteria we agree up front. An ongoing engagement provides consistent targeting, outreach, qualification, follow-up, and reporting. You don't have to start with a pilot: a serious ongoing engagement can begin straight after discovery.",
     },
     {
-      q: "Do I need to bring a list?",
-      a: "Bring a call-ready list, or I'll build one. List sourcing and enrichment are quoted separately, based on the market and how hard the right contacts are to find.",
+      q: "Do you guarantee meetings or sales?",
+      a: "No. Results depend on targeting, your offer, your sales follow-up, and how the market responds. What we commit to is disciplined execution, clear qualification criteria, and transparent reporting, with specific deliverables written into your scope.",
     },
     {
-      q: "Whose dialer and CRM do you use?",
-      a: "Mine. I use my own dialer and campaign-tracking setup, so you don't need to set anything up for me.",
+      q: "What counts as a qualified conversation?",
+      a: "We reached the right person, explained why we're calling, and had a meaningful exchange that produced useful context or a credible next step. Voicemails, gatekeepers, wrong contacts, and early brush-offs don't count.",
     },
     {
-      q: "Is this a cold email service?",
-      a: "No. Email follow-up is used where it supports a real conversation, callback, referral or next step. The calling is the service.",
+      q: "Who provides the list, and who handles follow-through?",
+      a: "Bring a call-ready list, or we can scope research and sourcing separately. We book meetings where there's a credible reason and nurture relevant prospects. Your team takes qualified opportunities forward from there.",
+    },
+    {
+      q: "Do I need my own dialer or CRM?",
+      a: "No. We bring our own calling and tracking infrastructure. If you'd like us to work in your systems or from your lists, we can accommodate that.",
     },
     {
       q: "Who makes the calls?",
-      a: "I do. If a campaign needs more calling capacity or faster market coverage, I can bring in an additional pair of callers and manage them directly. I stay hands-on and accountable for the quality of the work.",
+      a: "Angelo leads every engagement. When more coverage is needed, additional callers are brought in and managed directly, and Angelo stays responsible for strategy, quality, and reporting.",
     },
     {
-      q: "Where do you run campaigns?",
-      a: "Global B2B campaigns. What matters is a clear market with enough reachable prospects to support outbound.",
+      q: "Which markets do you cover?",
+      a: "B2B outreach across agreed markets. We confirm geographic and regulatory suitability during discovery.",
     },
     {
-      q: "What happens after the pilot?",
-      a: "We use the pilot's actual numbers to decide what a monthly engagement should look like.",
-    },
-    {
-      q: "Why should I trust your numbers?",
-      a: "Because you can read them yourself. The dial counts and appointment counts on this site are screenshots of the actual client threads, posted publicly as the campaigns ran. Those campaigns included meeting preparation in scope, which the current offer does not, so read the dials and the appointments.",
+      q: "What are the payment terms?",
+      a: "We work on prepaid, agreed scopes. We don't take commission-only or pay-after-results work.",
     },
   ],
 };

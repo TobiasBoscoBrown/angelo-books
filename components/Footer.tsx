@@ -14,6 +14,15 @@ export default function Footer() {
             {brand.tagline}
           </p>
           <a
+            href={brand.calendlyUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-5 px-5 py-2.5 rounded text-sm font-semibold transition-opacity hover:opacity-90"
+            style={{ background: "var(--gold)", color: "var(--navy-dark)" }}
+          >
+            Book a Call
+          </a>
+          <a
             href={brand.phoneHref}
             className="block text-sm mt-4 transition-colors hover:text-white"
             style={{ color: "#8fa8c0" }}
@@ -28,11 +37,11 @@ export default function Footer() {
           </p>
           <ul className="space-y-2 text-sm">
             {[
-              { label: "How it works", href: "/#services" },
-              { label: "Pilot", href: "/#pilot" },
-              { label: "Results", href: "/#proof" },
+              { label: "How It Works", href: "/#how-it-works" },
+              { label: "Engagements", href: "/#engagements" },
+              { label: "Results", href: "/#results" },
               { label: "Articles", href: "/articles" },
-              { label: "About Angelo", href: "/about" },
+              { label: "About", href: "/about" },
               { label: "FAQ", href: "/#faq" },
               { label: "Book a Call", href: brand.calendlyUrl },
             ].map((l) => (
@@ -51,7 +60,7 @@ export default function Footer() {
 
         <div>
           <p className="text-xs font-semibold uppercase tracking-widest mb-4 text-white">
-            Serving
+            Markets
           </p>
           <ul className="space-y-1 text-sm" style={{ color: "#8fa8c0" }}>
             {brand.serving.map((s) => (

@@ -15,9 +15,9 @@ export default function Header() {
   }, []);
 
   const links = [
-    { label: "How it works", href: "/#services" },
-    { label: "Pilot", href: "/#pilot" },
-    { label: "Results", href: "/#proof" },
+    { label: "How It Works", href: "/#how-it-works" },
+    { label: "Engagements", href: "/#engagements" },
+    { label: "Results", href: "/#results" },
     { label: "Articles", href: "/articles" },
     { label: "About", href: "/about" },
     { label: "FAQ", href: "/#faq" },
@@ -83,9 +83,23 @@ export default function Header() {
           </a>
         </nav>
 
-        {/* Mobile hamburger */}
+        {/* Mobile: Book a Call stays visible next to the menu button */}
+        <div className="md:hidden flex items-center gap-2">
+        <a
+          href={brand.calendlyUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-4 py-2.5 text-sm font-semibold rounded"
+          style={
+            scrolled
+              ? { background: "var(--navy)", color: "#ffffff" }
+              : { background: "var(--gold)", color: "var(--navy-dark)" }
+          }
+        >
+          Book a Call
+        </a>
         <button
-          className="md:hidden flex flex-col gap-1.5 p-2"
+          className="flex flex-col gap-1.5 p-2"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -108,6 +122,7 @@ export default function Header() {
             style={{ background: open ? "var(--navy)" : barColor }}
           />
         </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
