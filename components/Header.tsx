@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { brand } from "@/lib/brand";
+import { articles } from "@/lib/articles";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -18,7 +19,7 @@ export default function Header() {
     { label: "How It Works", href: "/#how-it-works" },
     { label: "Engagements", href: "/#engagements" },
     { label: "Results", href: "/#results" },
-    { label: "Articles", href: "/articles" },
+    ...(articles.length ? [{ label: "Articles", href: "/articles" }] : []),
     { label: "About", href: "/about" },
     { label: "FAQ", href: "/#faq" },
   ];

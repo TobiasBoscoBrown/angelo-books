@@ -7,6 +7,8 @@ import { brand } from "@/lib/brand";
 import { SITE_URL } from "@/lib/site";
 import ArticleBody from "@/components/ArticleBody";
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   return articles.map((a) => ({ slug: a.slug }));
 }

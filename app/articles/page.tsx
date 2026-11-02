@@ -5,6 +5,7 @@ import { articles } from "@/lib/articles";
 import { brand } from "@/lib/brand";
 import { SITE_URL } from "@/lib/site";
 import Reveal from "@/components/Reveal";
+import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Articles | Angelo Books",
@@ -22,6 +23,8 @@ const fmt = (d: string) =>
   });
 
 export default function ArticlesIndex() {
+  // Nothing published yet: send visitors to the home page instead of an empty list.
+  if (articles.length === 0) redirect("/");
   return (
     <>
       <section

@@ -26,11 +26,16 @@ export type Article = {
   keyword: string;
   hero: { src: string; alt: string };
   blocks: Block[];
+  /** Hidden articles stay in the code but are not listed, linked or served. */
+  hidden?: boolean;
 };
 
-export const articles: Article[] = [
+const allArticles: Article[] = [
   {
     slug: "b2b-cold-calling-conversion-rate",
+    // Hidden: framed around past US/Australia agency campaigns, which no longer
+    // matches the positioning. Remove this line to publish it again.
+    hidden: true,
     title: "B2B Cold Calling Conversion Rate: 475 Real Dials, Logged",
     h1: "B2B cold calling conversion rate: what 475 real dials actually booked",
     description:
@@ -222,5 +227,8 @@ export const articles: Article[] = [
     ],
   },
 ];
+
+/** Published articles only. Everything on the site reads from this. */
+export const articles: Article[] = allArticles.filter((a) => !a.hidden);
 
 export const getArticle = (slug: string) => articles.find((a) => a.slug === slug);

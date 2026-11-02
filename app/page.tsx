@@ -566,7 +566,8 @@ export default function Home() {
       {/* PROOF */}
       <Proof />
 
-      {/* ARTICLES */}
+      {/* ARTICLES (shown only when at least one is published) */}
+      {articles.length > 0 && (
       <section
         id="articles"
         className="py-24 md:py-32"
@@ -661,6 +662,7 @@ export default function Home() {
           )}
         </div>
       </section>
+      )}
 
       {/* FAQ */}
       <section
